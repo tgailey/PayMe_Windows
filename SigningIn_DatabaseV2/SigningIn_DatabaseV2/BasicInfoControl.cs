@@ -36,7 +36,7 @@ namespace SigningIn_DatabaseV2
 
                     SqlDataReader reader;
                     //cmd.CommandText = "SELECT * FROM Users";
-                    cmd.CommandText = string.Format(@"SELECT * FROM SurveyInfo
+                    cmd.CommandText = string.Format(@"SELECT * FROM BasicInfo
                                                       WHERE UserName = '{0}';", OpeningForm._username);
                     cmd.CommandType = CommandType.Text;
                     cmd.Connection = connection;
@@ -116,7 +116,7 @@ namespace SigningIn_DatabaseV2
                     if (first)
                     {
                         string dateOfBirth = (MonthBox.SelectedIndex + 1).ToString() + "/" + DayBox.SelectedItem.ToString() + "/" + YearBox.SelectedItem.ToString();
-                        cmd.CommandText = string.Format(@"INSERT INTO SurveyInfo 
+                        cmd.CommandText = string.Format(@"INSERT INTO BasicInfo 
                                             (UserName, FirstName, DateOfBirth, Gender, Sex)
                                                VALUES
                                                  ('{0}', '{1}', '{2}', '{3}', '{4}');", OpeningForm._username, FirstNameTextBox.Text, dateOfBirth, GenderBox.SelectedItem.ToString(), SexBox.SelectedItem.ToString());
@@ -128,7 +128,7 @@ namespace SigningIn_DatabaseV2
                     else
                     {
                         SqlDataReader reader;
-                        cmd.CommandText = string.Format(@"SELECT * FROM SurveyInfo
+                        cmd.CommandText = string.Format(@"SELECT * FROM BasicInfo
                                                     WHERE UserName = '{0}';", OpeningForm._username);
                         cmd.CommandType = CommandType.Text;
                         cmd.Connection = connection;
@@ -142,7 +142,7 @@ namespace SigningIn_DatabaseV2
 
 
                             string dateOfBirth = (MonthBox.SelectedIndex + 1).ToString() + "/" + DayBox.SelectedItem.ToString() + "/" + YearBox.SelectedItem.ToString();
-                            cmd.CommandText = string.Format(@"UPDATE SurveyInfo 
+                            cmd.CommandText = string.Format(@"UPDATE BasicInfo 
                                                       SET FirstName = '{0}', DateOfBirth = '{1}', Gender = '{2}', Sex = '{3}'
                                                       WHERE UserName = '{4}';",FirstNameTextBox.Text, dateOfBirth, GenderBox.SelectedItem.ToString(), SexBox.SelectedItem.ToString(), OpeningForm._username);
                             cmd.CommandType = CommandType.Text;

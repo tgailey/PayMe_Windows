@@ -52,16 +52,43 @@ namespace SigningIn_DatabaseV2
 
                     SqlDataReader reader;
                     //cmd.CommandText = "SELECT * FROM Users";
-                    cmd.CommandText = string.Format(@"SELECT * FROM SurveyInfo
-                                                      WHERE UserName = '{0}';", OpeningForm._username);
+                    cmd.CommandText = string.Format(@"SELECT BasicInfo.FirstName, PersonalityInfo.MBTI_IE 
+                                                      FROM BasicInfo
+                                                      FULL OUTER JOIN  PersonalityInfo  ON  BasicInfo.UserName = PersonalityInfo.UserName
+                                                      WHERE BasicInfo.UserName = '{0}' OR PersonalityInfo.UserName = '{0}';", OpeningForm._username);
                     cmd.CommandType = CommandType.Text;
                     cmd.Connection = connection;
                     reader = cmd.ExecuteReader();
                     if (reader.Read())
                     {
-                        stateOfSections[1] = 1;
-                        BasicInfoPanel.Visible = false;
-                        BasicInfoShowHide.Text = "Show";
+                        if (reader["BasicInfo.FirstName"].ToString().Equals(null))
+                        {
+                            stateOfSections[1] = 0;
+                            BasicInfoPanel.Visible = true;
+                            BasicInfoShowHide.Text = "Hide";
+                            BasicInfoLabel.ForeColor = Color.PaleVioletRed;
+                            BasicInfoShowHide.BackColor = Color.PaleVioletRed;
+                        }
+                        else
+                        {
+                            stateOfSections[1] = 1;
+                            BasicInfoPanel.Visible = false;
+                            BasicInfoShowHide.Text = "Show";
+                        }
+                        if (reader["PersonalityInfo.MBTI_IE"].ToString().Equals(null))
+                        {
+                            stateOfSections[2] = 0;
+                            PersonalityInfoPanel.Visible = true;
+                            PersonalityInfoShowHide.Text = "Hide";
+                            PersonalityInfoLabel.ForeColor = Color.PaleVioletRed;
+                            PersonalityInfoShowHide.BackColor = Color.PaleVioletRed;
+                        }
+                        else
+                        {
+                            stateOfSections[2] = 1;
+                            PersonalityInfoPanel.Visible = false;
+                            PersonalityInfoShowHide.Text = "Show";
+                        }
                     }
                     else
                     {
@@ -70,6 +97,12 @@ namespace SigningIn_DatabaseV2
                         BasicInfoShowHide.Text = "Hide";
                         BasicInfoLabel.ForeColor = Color.PaleVioletRed;
                         BasicInfoShowHide.BackColor = Color.PaleVioletRed;
+
+                        stateOfSections[2] = 0;
+                        PersonalityInfoPanel.Visible = true;
+                        PersonalityInfoShowHide.Text = "Hide";
+                        PersonalityInfoLabel.ForeColor = Color.PaleVioletRed;
+                        PersonalityInfoShowHide.BackColor = Color.PaleVioletRed;
                     }
                     reader.Close();
                     cmd.Dispose();
@@ -83,10 +116,6 @@ namespace SigningIn_DatabaseV2
             }
             stateOfSections[0] = 1;
             AccountInfoPanel.Visible = false;
-
-            //TEMP FOR TESTING PERSONALITYCONTROL
-            stateOfSections[2] = 0;
-
             #endregion
             loadForm();
         }
@@ -97,8 +126,6 @@ namespace SigningIn_DatabaseV2
             AccountInfoPanel.Controls.Add(usercontrols[0]);
             usercontrols[1] = new BasicInfoControl(stateOfSections[1], this);
             BasicInfoPanel.Controls.Add(usercontrols[1]);
-            usercontrols[2] = new PersonalityInfoControl(stateOfSections[2], this);
-            PersonalityInfoPanel.Controls.Add(usercontrols[2]);
         }
         public void changeColors(int i)
         {

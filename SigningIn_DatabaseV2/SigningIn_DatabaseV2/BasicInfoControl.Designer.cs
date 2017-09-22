@@ -265,18 +265,18 @@
             // DisplayLabel
             // 
             this.DisplayLabel.AutoSize = true;
-            this.DisplayLabel.Font = new System.Drawing.Font("Bell MT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DisplayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DisplayLabel.ForeColor = System.Drawing.Color.MediumAquamarine;
             this.DisplayLabel.Location = new System.Drawing.Point(20, 175);
             this.DisplayLabel.Name = "DisplayLabel";
-            this.DisplayLabel.Size = new System.Drawing.Size(213, 15);
+            this.DisplayLabel.Size = new System.Drawing.Size(228, 15);
             this.DisplayLabel.TabIndex = 10;
             this.DisplayLabel.Text = "----- Press Confirm Edits When Done -----";
             // 
             // ConfirmEditsButton
             // 
             this.ConfirmEditsButton.BackColor = System.Drawing.Color.MediumAquamarine;
-            this.ConfirmEditsButton.Font = new System.Drawing.Font("Bell MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ConfirmEditsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ConfirmEditsButton.ForeColor = System.Drawing.Color.DimGray;
             this.ConfirmEditsButton.Location = new System.Drawing.Point(26, 189);
             this.ConfirmEditsButton.Name = "ConfirmEditsButton";
@@ -296,44 +296,44 @@
             // ConfirmPasswordLabelEdit
             // 
             this.ConfirmPasswordLabelEdit.AutoSize = true;
-            this.ConfirmPasswordLabelEdit.Font = new System.Drawing.Font("Bell MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ConfirmPasswordLabelEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ConfirmPasswordLabelEdit.ForeColor = System.Drawing.Color.MediumAquamarine;
             this.ConfirmPasswordLabelEdit.Location = new System.Drawing.Point(89, 133);
             this.ConfirmPasswordLabelEdit.Name = "ConfirmPasswordLabelEdit";
-            this.ConfirmPasswordLabelEdit.Size = new System.Drawing.Size(63, 15);
+            this.ConfirmPasswordLabelEdit.Size = new System.Drawing.Size(64, 16);
             this.ConfirmPasswordLabelEdit.TabIndex = 8;
             this.ConfirmPasswordLabelEdit.Text = "--- SEX ---";
             // 
             // GenderLabelEdit
             // 
             this.GenderLabelEdit.AutoSize = true;
-            this.GenderLabelEdit.Font = new System.Drawing.Font("Bell MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GenderLabelEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GenderLabelEdit.ForeColor = System.Drawing.Color.MediumAquamarine;
             this.GenderLabelEdit.Location = new System.Drawing.Point(74, 93);
             this.GenderLabelEdit.Name = "GenderLabelEdit";
-            this.GenderLabelEdit.Size = new System.Drawing.Size(94, 15);
+            this.GenderLabelEdit.Size = new System.Drawing.Size(96, 16);
             this.GenderLabelEdit.TabIndex = 6;
             this.GenderLabelEdit.Text = "--- GENDER ---";
             // 
             // EmailLabelEdit
             // 
             this.EmailLabelEdit.AutoSize = true;
-            this.EmailLabelEdit.Font = new System.Drawing.Font("Bell MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmailLabelEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EmailLabelEdit.ForeColor = System.Drawing.Color.MediumAquamarine;
             this.EmailLabelEdit.Location = new System.Drawing.Point(52, 47);
             this.EmailLabelEdit.Name = "EmailLabelEdit";
-            this.EmailLabelEdit.Size = new System.Drawing.Size(138, 15);
+            this.EmailLabelEdit.Size = new System.Drawing.Size(140, 16);
             this.EmailLabelEdit.TabIndex = 2;
             this.EmailLabelEdit.Text = "--- DATE OF BIRTH ---";
             // 
             // FirstNameLabelEdit
             // 
             this.FirstNameLabelEdit.AutoSize = true;
-            this.FirstNameLabelEdit.Font = new System.Drawing.Font("Bell MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FirstNameLabelEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FirstNameLabelEdit.ForeColor = System.Drawing.Color.MediumAquamarine;
             this.FirstNameLabelEdit.Location = new System.Drawing.Point(66, 4);
             this.FirstNameLabelEdit.Name = "FirstNameLabelEdit";
-            this.FirstNameLabelEdit.Size = new System.Drawing.Size(118, 15);
+            this.FirstNameLabelEdit.Size = new System.Drawing.Size(119, 16);
             this.FirstNameLabelEdit.TabIndex = 0;
             this.FirstNameLabelEdit.Text = "--- FIRST NAME ---";
             // 
@@ -358,17 +358,17 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Bell MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.MediumAquamarine;
             this.label1.Location = new System.Drawing.Point(85, 133);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 15);
+            this.label1.Size = new System.Drawing.Size(64, 16);
             this.label1.TabIndex = 15;
             this.label1.Text = "--- SEX ---";
             // 
             // UserSexLabel
             // 
-            this.UserSexLabel.Font = new System.Drawing.Font("Bell MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserSexLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UserSexLabel.ForeColor = System.Drawing.Color.MediumAquamarine;
             this.UserSexLabel.Location = new System.Drawing.Point(84, 148);
             this.UserSexLabel.Name = "UserSexLabel";
@@ -380,40 +380,40 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Bell MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.MediumAquamarine;
             this.label2.Location = new System.Drawing.Point(72, 92);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 15);
+            this.label2.Size = new System.Drawing.Size(96, 16);
             this.label2.TabIndex = 14;
             this.label2.Text = "--- GENDER ---";
             // 
             // DisplayLabel2
             // 
             this.DisplayLabel2.AutoSize = true;
-            this.DisplayLabel2.Font = new System.Drawing.Font("Bell MT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DisplayLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DisplayLabel2.ForeColor = System.Drawing.Color.MediumAquamarine;
             this.DisplayLabel2.Location = new System.Drawing.Point(18, 173);
             this.DisplayLabel2.Name = "DisplayLabel2";
-            this.DisplayLabel2.Size = new System.Drawing.Size(212, 15);
+            this.DisplayLabel2.Size = new System.Drawing.Size(225, 15);
             this.DisplayLabel2.TabIndex = 8;
             this.DisplayLabel2.Text = "----- Click Edit Info to Make Changes -----";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Bell MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.MediumAquamarine;
             this.label3.Location = new System.Drawing.Point(50, 46);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(138, 15);
+            this.label3.Size = new System.Drawing.Size(140, 16);
             this.label3.TabIndex = 13;
             this.label3.Text = "--- DATE OF BIRTH ---";
             // 
             // EditInfoButton
             // 
             this.EditInfoButton.BackColor = System.Drawing.Color.MediumAquamarine;
-            this.EditInfoButton.Font = new System.Drawing.Font("Bell MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EditInfoButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EditInfoButton.ForeColor = System.Drawing.Color.DimGray;
             this.EditInfoButton.Location = new System.Drawing.Point(25, 189);
             this.EditInfoButton.Name = "EditInfoButton";
@@ -426,17 +426,17 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Bell MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.MediumAquamarine;
             this.label4.Location = new System.Drawing.Point(64, 3);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(118, 15);
+            this.label4.Size = new System.Drawing.Size(119, 16);
             this.label4.TabIndex = 12;
             this.label4.Text = "--- FIRST NAME ---";
             // 
             // UserGenderLabel
             // 
-            this.UserGenderLabel.Font = new System.Drawing.Font("Bell MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserGenderLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UserGenderLabel.ForeColor = System.Drawing.Color.MediumAquamarine;
             this.UserGenderLabel.Location = new System.Drawing.Point(71, 109);
             this.UserGenderLabel.Name = "UserGenderLabel";
@@ -447,7 +447,7 @@
             // 
             // UserDOBLabel
             // 
-            this.UserDOBLabel.Font = new System.Drawing.Font("Bell MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserDOBLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UserDOBLabel.ForeColor = System.Drawing.Color.MediumAquamarine;
             this.UserDOBLabel.Location = new System.Drawing.Point(61, 68);
             this.UserDOBLabel.Name = "UserDOBLabel";
@@ -458,7 +458,7 @@
             // 
             // UserFirstNameLabel
             // 
-            this.UserFirstNameLabel.Font = new System.Drawing.Font("Bell MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserFirstNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UserFirstNameLabel.ForeColor = System.Drawing.Color.MediumAquamarine;
             this.UserFirstNameLabel.Location = new System.Drawing.Point(64, 21);
             this.UserFirstNameLabel.Name = "UserFirstNameLabel";
