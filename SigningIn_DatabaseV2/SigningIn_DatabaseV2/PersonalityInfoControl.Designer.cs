@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.DisplayPanel = new System.Windows.Forms.Panel();
+            this.DisplayLabel2 = new System.Windows.Forms.Label();
+            this.EditInfoButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.Big5_NeuroticismPercentLabel = new System.Windows.Forms.Label();
@@ -68,6 +70,8 @@
             this.SensingPercentLabel = new System.Windows.Forms.Label();
             this.IntuitivePercentLabel = new System.Windows.Forms.Label();
             this.MBTI_TF_BAR = new System.Windows.Forms.TrackBar();
+            this.DisplayLabel = new System.Windows.Forms.Label();
+            this.ConfirmEditsButton = new System.Windows.Forms.Button();
             this.EditPanel = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
@@ -108,10 +112,6 @@
             this.Edit_MBTI_SensingLabel = new System.Windows.Forms.Label();
             this.Edit_MBTI_IntuitionLabel = new System.Windows.Forms.Label();
             this.EDIT_MBTI_TFBAR = new System.Windows.Forms.TrackBar();
-            this.DisplayLabel = new System.Windows.Forms.Label();
-            this.ConfirmEditsButton = new System.Windows.Forms.Button();
-            this.DisplayLabel2 = new System.Windows.Forms.Label();
-            this.EditInfoButton = new System.Windows.Forms.Button();
             this.DisplayPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BIG5_N_BAR)).BeginInit();
@@ -140,14 +140,38 @@
             // 
             // DisplayPanel
             // 
-            this.DisplayPanel.Controls.Add(this.DisplayLabel);
-            this.DisplayPanel.Controls.Add(this.ConfirmEditsButton);
+            this.DisplayPanel.Controls.Add(this.DisplayLabel2);
+            this.DisplayPanel.Controls.Add(this.EditInfoButton);
             this.DisplayPanel.Controls.Add(this.panel1);
             this.DisplayPanel.Controls.Add(this.MBTIPanel);
             this.DisplayPanel.Location = new System.Drawing.Point(0, 0);
             this.DisplayPanel.Name = "DisplayPanel";
-            this.DisplayPanel.Size = new System.Drawing.Size(250, 690);
+            this.DisplayPanel.Size = new System.Drawing.Size(250, 600);
             this.DisplayPanel.TabIndex = 8;
+            // 
+            // DisplayLabel2
+            // 
+            this.DisplayLabel2.AutoSize = true;
+            this.DisplayLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DisplayLabel2.ForeColor = System.Drawing.Color.MediumAquamarine;
+            this.DisplayLabel2.Location = new System.Drawing.Point(14, 554);
+            this.DisplayLabel2.Name = "DisplayLabel2";
+            this.DisplayLabel2.Size = new System.Drawing.Size(225, 15);
+            this.DisplayLabel2.TabIndex = 25;
+            this.DisplayLabel2.Text = "----- Click Edit Info to Make Changes -----";
+            // 
+            // EditInfoButton
+            // 
+            this.EditInfoButton.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.EditInfoButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EditInfoButton.ForeColor = System.Drawing.Color.DimGray;
+            this.EditInfoButton.Location = new System.Drawing.Point(21, 570);
+            this.EditInfoButton.Name = "EditInfoButton";
+            this.EditInfoButton.Size = new System.Drawing.Size(200, 25);
+            this.EditInfoButton.TabIndex = 26;
+            this.EditInfoButton.Text = "Edit Info";
+            this.EditInfoButton.UseVisualStyleBackColor = false;
+            this.EditInfoButton.Click += new System.EventHandler(this.EditInfoButton_Click);
             // 
             // panel1
             // 
@@ -171,18 +195,18 @@
             this.panel1.Controls.Add(this.BIG5_E_BAR);
             this.panel1.Location = new System.Drawing.Point(0, 280);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(250, 332);
+            this.panel1.Size = new System.Drawing.Size(250, 270);
             this.panel1.TabIndex = 24;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.DimGray;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.MediumAquamarine;
-            this.label8.Location = new System.Drawing.Point(46, 282);
+            this.label8.Location = new System.Drawing.Point(46, 223);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(150, 18);
+            this.label8.Size = new System.Drawing.Size(131, 16);
             this.label8.TabIndex = 29;
             this.label8.Text = "--- NEUROTICISM ---";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -191,11 +215,11 @@
             // 
             this.Big5_NeuroticismPercentLabel.AutoSize = true;
             this.Big5_NeuroticismPercentLabel.BackColor = System.Drawing.Color.DimGray;
-            this.Big5_NeuroticismPercentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Big5_NeuroticismPercentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Big5_NeuroticismPercentLabel.ForeColor = System.Drawing.Color.MediumAquamarine;
-            this.Big5_NeuroticismPercentLabel.Location = new System.Drawing.Point(194, 304);
+            this.Big5_NeuroticismPercentLabel.Location = new System.Drawing.Point(191, 238);
             this.Big5_NeuroticismPercentLabel.Name = "Big5_NeuroticismPercentLabel";
-            this.Big5_NeuroticismPercentLabel.Size = new System.Drawing.Size(18, 20);
+            this.Big5_NeuroticismPercentLabel.Size = new System.Drawing.Size(15, 16);
             this.Big5_NeuroticismPercentLabel.TabIndex = 27;
             this.Big5_NeuroticismPercentLabel.Text = "0";
             this.Big5_NeuroticismPercentLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -203,23 +227,23 @@
             // BIG5_N_BAR
             // 
             this.BIG5_N_BAR.AutoSize = false;
-            this.BIG5_N_BAR.Location = new System.Drawing.Point(15, 304);
+            this.BIG5_N_BAR.Enabled = false;
+            this.BIG5_N_BAR.Location = new System.Drawing.Point(14, 235);
             this.BIG5_N_BAR.Maximum = 100;
             this.BIG5_N_BAR.Name = "BIG5_N_BAR";
             this.BIG5_N_BAR.Size = new System.Drawing.Size(176, 27);
             this.BIG5_N_BAR.TabIndex = 28;
             this.BIG5_N_BAR.TickStyle = System.Windows.Forms.TickStyle.None;
-            this.BIG5_N_BAR.Scroll += new System.EventHandler(this.BIG5_N_BAR_Scroll);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.DimGray;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.MediumAquamarine;
-            this.label7.Location = new System.Drawing.Point(46, 236);
+            this.label7.Location = new System.Drawing.Point(35, 194);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(176, 18);
+            this.label7.Size = new System.Drawing.Size(156, 16);
             this.label7.TabIndex = 26;
             this.label7.Text = "--- AGREEABLENESS ---";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -228,11 +252,11 @@
             // 
             this.Big5_ExtraversionLabel.AutoSize = true;
             this.Big5_ExtraversionLabel.BackColor = System.Drawing.Color.DimGray;
-            this.Big5_ExtraversionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Big5_ExtraversionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Big5_ExtraversionLabel.ForeColor = System.Drawing.Color.MediumAquamarine;
-            this.Big5_ExtraversionLabel.Location = new System.Drawing.Point(46, 192);
+            this.Big5_ExtraversionLabel.Location = new System.Drawing.Point(46, 166);
             this.Big5_ExtraversionLabel.Name = "Big5_ExtraversionLabel";
-            this.Big5_ExtraversionLabel.Size = new System.Drawing.Size(161, 18);
+            this.Big5_ExtraversionLabel.Size = new System.Drawing.Size(143, 16);
             this.Big5_ExtraversionLabel.TabIndex = 25;
             this.Big5_ExtraversionLabel.Text = "--- EXTRAVERSION ---";
             this.Big5_ExtraversionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -241,11 +265,11 @@
             // 
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.Color.DimGray;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.MediumAquamarine;
-            this.label13.Location = new System.Drawing.Point(25, 147);
+            this.label13.Location = new System.Drawing.Point(25, 132);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(211, 18);
+            this.label13.Size = new System.Drawing.Size(185, 16);
             this.label13.TabIndex = 24;
             this.label13.Text = "--- CONSCIENTIOUSNESS ---";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -254,11 +278,11 @@
             // 
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.DimGray;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.MediumAquamarine;
-            this.label10.Location = new System.Drawing.Point(0, 101);
+            this.label10.Location = new System.Drawing.Point(12, 98);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(255, 18);
+            this.label10.Size = new System.Drawing.Size(223, 16);
             this.label10.TabIndex = 23;
             this.label10.Text = "--- OPENNESS TO EXPERIENCE ---";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -311,23 +335,23 @@
             // BIG5_OTE_BAR
             // 
             this.BIG5_OTE_BAR.AutoSize = false;
-            this.BIG5_OTE_BAR.Location = new System.Drawing.Point(15, 123);
+            this.BIG5_OTE_BAR.Enabled = false;
+            this.BIG5_OTE_BAR.Location = new System.Drawing.Point(15, 113);
             this.BIG5_OTE_BAR.Maximum = 100;
             this.BIG5_OTE_BAR.Name = "BIG5_OTE_BAR";
             this.BIG5_OTE_BAR.Size = new System.Drawing.Size(176, 27);
             this.BIG5_OTE_BAR.TabIndex = 7;
             this.BIG5_OTE_BAR.TickStyle = System.Windows.Forms.TickStyle.None;
-            this.BIG5_OTE_BAR.Scroll += new System.EventHandler(this.BIG5_OTE_BAR_Scroll);
             // 
             // Big5_AgreeablenessPercentLabel
             // 
             this.Big5_AgreeablenessPercentLabel.AutoSize = true;
             this.Big5_AgreeablenessPercentLabel.BackColor = System.Drawing.Color.DimGray;
-            this.Big5_AgreeablenessPercentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Big5_AgreeablenessPercentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Big5_AgreeablenessPercentLabel.ForeColor = System.Drawing.Color.MediumAquamarine;
-            this.Big5_AgreeablenessPercentLabel.Location = new System.Drawing.Point(194, 255);
+            this.Big5_AgreeablenessPercentLabel.Location = new System.Drawing.Point(192, 208);
             this.Big5_AgreeablenessPercentLabel.Name = "Big5_AgreeablenessPercentLabel";
-            this.Big5_AgreeablenessPercentLabel.Size = new System.Drawing.Size(18, 20);
+            this.Big5_AgreeablenessPercentLabel.Size = new System.Drawing.Size(15, 16);
             this.Big5_AgreeablenessPercentLabel.TabIndex = 21;
             this.Big5_AgreeablenessPercentLabel.Text = "0";
             this.Big5_AgreeablenessPercentLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -336,11 +360,11 @@
             // 
             this.Big5_OpennessPercentLabel.AutoSize = true;
             this.Big5_OpennessPercentLabel.BackColor = System.Drawing.Color.DimGray;
-            this.Big5_OpennessPercentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Big5_OpennessPercentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Big5_OpennessPercentLabel.ForeColor = System.Drawing.Color.MediumAquamarine;
-            this.Big5_OpennessPercentLabel.Location = new System.Drawing.Point(194, 123);
+            this.Big5_OpennessPercentLabel.Location = new System.Drawing.Point(192, 116);
             this.Big5_OpennessPercentLabel.Name = "Big5_OpennessPercentLabel";
-            this.Big5_OpennessPercentLabel.Size = new System.Drawing.Size(18, 20);
+            this.Big5_OpennessPercentLabel.Size = new System.Drawing.Size(15, 16);
             this.Big5_OpennessPercentLabel.TabIndex = 6;
             this.Big5_OpennessPercentLabel.Text = "0";
             this.Big5_OpennessPercentLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -348,34 +372,34 @@
             // BIG5_A_BAR
             // 
             this.BIG5_A_BAR.AutoSize = false;
-            this.BIG5_A_BAR.Location = new System.Drawing.Point(15, 258);
+            this.BIG5_A_BAR.Enabled = false;
+            this.BIG5_A_BAR.Location = new System.Drawing.Point(15, 208);
             this.BIG5_A_BAR.Maximum = 100;
             this.BIG5_A_BAR.Name = "BIG5_A_BAR";
             this.BIG5_A_BAR.Size = new System.Drawing.Size(176, 27);
             this.BIG5_A_BAR.TabIndex = 22;
             this.BIG5_A_BAR.TickStyle = System.Windows.Forms.TickStyle.None;
-            this.BIG5_A_BAR.Scroll += new System.EventHandler(this.BIG5_A_BAR_Scroll);
             // 
             // BIG5_C_BAR
             // 
             this.BIG5_C_BAR.AutoSize = false;
-            this.BIG5_C_BAR.Location = new System.Drawing.Point(15, 169);
+            this.BIG5_C_BAR.Enabled = false;
+            this.BIG5_C_BAR.Location = new System.Drawing.Point(15, 148);
             this.BIG5_C_BAR.Maximum = 100;
             this.BIG5_C_BAR.Name = "BIG5_C_BAR";
             this.BIG5_C_BAR.Size = new System.Drawing.Size(176, 27);
             this.BIG5_C_BAR.TabIndex = 12;
             this.BIG5_C_BAR.TickStyle = System.Windows.Forms.TickStyle.None;
-            this.BIG5_C_BAR.Scroll += new System.EventHandler(this.BIG5_C_BAR_Scroll);
             // 
             // Big5_ExtraversionPercentLabel
             // 
             this.Big5_ExtraversionPercentLabel.AutoSize = true;
             this.Big5_ExtraversionPercentLabel.BackColor = System.Drawing.Color.DimGray;
-            this.Big5_ExtraversionPercentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Big5_ExtraversionPercentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Big5_ExtraversionPercentLabel.ForeColor = System.Drawing.Color.MediumAquamarine;
-            this.Big5_ExtraversionPercentLabel.Location = new System.Drawing.Point(194, 211);
+            this.Big5_ExtraversionPercentLabel.Location = new System.Drawing.Point(192, 180);
             this.Big5_ExtraversionPercentLabel.Name = "Big5_ExtraversionPercentLabel";
-            this.Big5_ExtraversionPercentLabel.Size = new System.Drawing.Size(18, 20);
+            this.Big5_ExtraversionPercentLabel.Size = new System.Drawing.Size(15, 16);
             this.Big5_ExtraversionPercentLabel.TabIndex = 16;
             this.Big5_ExtraversionPercentLabel.Text = "0";
             this.Big5_ExtraversionPercentLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -384,11 +408,11 @@
             // 
             this.Big5_ConscientiousnessPercentLabel.AutoSize = true;
             this.Big5_ConscientiousnessPercentLabel.BackColor = System.Drawing.Color.DimGray;
-            this.Big5_ConscientiousnessPercentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Big5_ConscientiousnessPercentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Big5_ConscientiousnessPercentLabel.ForeColor = System.Drawing.Color.MediumAquamarine;
-            this.Big5_ConscientiousnessPercentLabel.Location = new System.Drawing.Point(194, 169);
+            this.Big5_ConscientiousnessPercentLabel.Location = new System.Drawing.Point(192, 151);
             this.Big5_ConscientiousnessPercentLabel.Name = "Big5_ConscientiousnessPercentLabel";
-            this.Big5_ConscientiousnessPercentLabel.Size = new System.Drawing.Size(18, 20);
+            this.Big5_ConscientiousnessPercentLabel.Size = new System.Drawing.Size(15, 16);
             this.Big5_ConscientiousnessPercentLabel.TabIndex = 11;
             this.Big5_ConscientiousnessPercentLabel.Text = "0";
             this.Big5_ConscientiousnessPercentLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -396,21 +420,21 @@
             // BIG5_E_BAR
             // 
             this.BIG5_E_BAR.AutoSize = false;
-            this.BIG5_E_BAR.Location = new System.Drawing.Point(15, 212);
+            this.BIG5_E_BAR.Enabled = false;
+            this.BIG5_E_BAR.Location = new System.Drawing.Point(15, 178);
             this.BIG5_E_BAR.Maximum = 100;
             this.BIG5_E_BAR.Name = "BIG5_E_BAR";
             this.BIG5_E_BAR.Size = new System.Drawing.Size(176, 27);
             this.BIG5_E_BAR.TabIndex = 17;
             this.BIG5_E_BAR.TickStyle = System.Windows.Forms.TickStyle.None;
-            this.BIG5_E_BAR.Scroll += new System.EventHandler(this.BIG5_E_BAR_Scroll);
             // 
             // MBTIPanel
             // 
+            this.MBTIPanel.Controls.Add(this.TestMBTIButton);
             this.MBTIPanel.Controls.Add(this.label6);
             this.MBTIPanel.Controls.Add(this.label5);
             this.MBTIPanel.Controls.Add(this.label1);
             this.MBTIPanel.Controls.Add(this.label3);
-            this.MBTIPanel.Controls.Add(this.TestMBTIButton);
             this.MBTIPanel.Controls.Add(this.FirstNameLabelEdit);
             this.MBTIPanel.Controls.Add(this.MBTI_IE_BAR);
             this.MBTIPanel.Controls.Add(this.JudgingPercentLabel);
@@ -472,9 +496,9 @@
             // label3
             // 
             this.label3.BackColor = System.Drawing.Color.DimGray;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.MediumAquamarine;
-            this.label3.Location = new System.Drawing.Point(3, 21);
+            this.label3.Location = new System.Drawing.Point(2, 21);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(242, 49);
             this.label3.TabIndex = 1;
@@ -492,7 +516,7 @@
             this.TestMBTIButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TestMBTIButton.ForeColor = System.Drawing.Color.MediumAquamarine;
             this.TestMBTIButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.TestMBTIButton.Location = new System.Drawing.Point(12, 69);
+            this.TestMBTIButton.Location = new System.Drawing.Point(12, 61);
             this.TestMBTIButton.Name = "TestMBTIButton";
             this.TestMBTIButton.Size = new System.Drawing.Size(227, 30);
             this.TestMBTIButton.TabIndex = 2;
@@ -515,6 +539,7 @@
             // MBTI_IE_BAR
             // 
             this.MBTI_IE_BAR.AutoSize = false;
+            this.MBTI_IE_BAR.Enabled = false;
             this.MBTI_IE_BAR.Location = new System.Drawing.Point(34, 123);
             this.MBTI_IE_BAR.Maximum = 100;
             this.MBTI_IE_BAR.Name = "MBTI_IE_BAR";
@@ -522,17 +547,16 @@
             this.MBTI_IE_BAR.TabIndex = 7;
             this.MBTI_IE_BAR.TickStyle = System.Windows.Forms.TickStyle.None;
             this.MBTI_IE_BAR.Value = 50;
-            this.MBTI_IE_BAR.Scroll += new System.EventHandler(this.MBTI_IE_BAR_Scroll);
             // 
             // JudgingPercentLabel
             // 
             this.JudgingPercentLabel.AutoSize = true;
             this.JudgingPercentLabel.BackColor = System.Drawing.Color.DimGray;
-            this.JudgingPercentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.JudgingPercentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.JudgingPercentLabel.ForeColor = System.Drawing.Color.MediumAquamarine;
             this.JudgingPercentLabel.Location = new System.Drawing.Point(12, 258);
             this.JudgingPercentLabel.Name = "JudgingPercentLabel";
-            this.JudgingPercentLabel.Size = new System.Drawing.Size(27, 20);
+            this.JudgingPercentLabel.Size = new System.Drawing.Size(22, 16);
             this.JudgingPercentLabel.TabIndex = 20;
             this.JudgingPercentLabel.Text = "50";
             this.JudgingPercentLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -541,11 +565,11 @@
             // 
             this.PerceivingPercentLabel.AutoSize = true;
             this.PerceivingPercentLabel.BackColor = System.Drawing.Color.DimGray;
-            this.PerceivingPercentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PerceivingPercentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PerceivingPercentLabel.ForeColor = System.Drawing.Color.MediumAquamarine;
             this.PerceivingPercentLabel.Location = new System.Drawing.Point(216, 258);
             this.PerceivingPercentLabel.Name = "PerceivingPercentLabel";
-            this.PerceivingPercentLabel.Size = new System.Drawing.Size(27, 20);
+            this.PerceivingPercentLabel.Size = new System.Drawing.Size(22, 16);
             this.PerceivingPercentLabel.TabIndex = 21;
             this.PerceivingPercentLabel.Text = "50";
             this.PerceivingPercentLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -567,11 +591,11 @@
             // 
             this.IntrovertedPercentLabel.AutoSize = true;
             this.IntrovertedPercentLabel.BackColor = System.Drawing.Color.DimGray;
-            this.IntrovertedPercentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IntrovertedPercentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IntrovertedPercentLabel.ForeColor = System.Drawing.Color.MediumAquamarine;
             this.IntrovertedPercentLabel.Location = new System.Drawing.Point(216, 123);
             this.IntrovertedPercentLabel.Name = "IntrovertedPercentLabel";
-            this.IntrovertedPercentLabel.Size = new System.Drawing.Size(27, 20);
+            this.IntrovertedPercentLabel.Size = new System.Drawing.Size(22, 16);
             this.IntrovertedPercentLabel.TabIndex = 6;
             this.IntrovertedPercentLabel.Text = "50";
             this.IntrovertedPercentLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -580,11 +604,11 @@
             // 
             this.ExtrovertedPercentLabel.AutoSize = true;
             this.ExtrovertedPercentLabel.BackColor = System.Drawing.Color.DimGray;
-            this.ExtrovertedPercentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExtrovertedPercentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ExtrovertedPercentLabel.ForeColor = System.Drawing.Color.MediumAquamarine;
             this.ExtrovertedPercentLabel.Location = new System.Drawing.Point(12, 123);
             this.ExtrovertedPercentLabel.Name = "ExtrovertedPercentLabel";
-            this.ExtrovertedPercentLabel.Size = new System.Drawing.Size(27, 20);
+            this.ExtrovertedPercentLabel.Size = new System.Drawing.Size(22, 16);
             this.ExtrovertedPercentLabel.TabIndex = 5;
             this.ExtrovertedPercentLabel.Text = "50";
             this.ExtrovertedPercentLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -592,6 +616,7 @@
             // MBTI_JP_BAR
             // 
             this.MBTI_JP_BAR.AutoSize = false;
+            this.MBTI_JP_BAR.Enabled = false;
             this.MBTI_JP_BAR.Location = new System.Drawing.Point(34, 258);
             this.MBTI_JP_BAR.Maximum = 100;
             this.MBTI_JP_BAR.Name = "MBTI_JP_BAR";
@@ -599,11 +624,11 @@
             this.MBTI_JP_BAR.TabIndex = 22;
             this.MBTI_JP_BAR.TickStyle = System.Windows.Forms.TickStyle.None;
             this.MBTI_JP_BAR.Value = 50;
-            this.MBTI_JP_BAR.Scroll += new System.EventHandler(this.MBTI_JP_BAR_Scroll);
             // 
             // MBTI_NS_BAR
             // 
             this.MBTI_NS_BAR.AutoSize = false;
+            this.MBTI_NS_BAR.Enabled = false;
             this.MBTI_NS_BAR.Location = new System.Drawing.Point(34, 169);
             this.MBTI_NS_BAR.Maximum = 100;
             this.MBTI_NS_BAR.Name = "MBTI_NS_BAR";
@@ -611,17 +636,16 @@
             this.MBTI_NS_BAR.TabIndex = 12;
             this.MBTI_NS_BAR.TickStyle = System.Windows.Forms.TickStyle.None;
             this.MBTI_NS_BAR.Value = 50;
-            this.MBTI_NS_BAR.Scroll += new System.EventHandler(this.MBTI_NS_BAR_Scroll);
             // 
             // ThinkingPercentLabel
             // 
             this.ThinkingPercentLabel.AutoSize = true;
             this.ThinkingPercentLabel.BackColor = System.Drawing.Color.DimGray;
-            this.ThinkingPercentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ThinkingPercentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ThinkingPercentLabel.ForeColor = System.Drawing.Color.MediumAquamarine;
             this.ThinkingPercentLabel.Location = new System.Drawing.Point(12, 212);
             this.ThinkingPercentLabel.Name = "ThinkingPercentLabel";
-            this.ThinkingPercentLabel.Size = new System.Drawing.Size(27, 20);
+            this.ThinkingPercentLabel.Size = new System.Drawing.Size(22, 16);
             this.ThinkingPercentLabel.TabIndex = 15;
             this.ThinkingPercentLabel.Text = "50";
             this.ThinkingPercentLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -630,11 +654,11 @@
             // 
             this.FeelingPercentLabel.AutoSize = true;
             this.FeelingPercentLabel.BackColor = System.Drawing.Color.DimGray;
-            this.FeelingPercentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FeelingPercentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FeelingPercentLabel.ForeColor = System.Drawing.Color.MediumAquamarine;
             this.FeelingPercentLabel.Location = new System.Drawing.Point(216, 212);
             this.FeelingPercentLabel.Name = "FeelingPercentLabel";
-            this.FeelingPercentLabel.Size = new System.Drawing.Size(27, 20);
+            this.FeelingPercentLabel.Size = new System.Drawing.Size(22, 16);
             this.FeelingPercentLabel.TabIndex = 16;
             this.FeelingPercentLabel.Text = "50";
             this.FeelingPercentLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -643,11 +667,11 @@
             // 
             this.SensingPercentLabel.AutoSize = true;
             this.SensingPercentLabel.BackColor = System.Drawing.Color.DimGray;
-            this.SensingPercentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SensingPercentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SensingPercentLabel.ForeColor = System.Drawing.Color.MediumAquamarine;
             this.SensingPercentLabel.Location = new System.Drawing.Point(216, 169);
             this.SensingPercentLabel.Name = "SensingPercentLabel";
-            this.SensingPercentLabel.Size = new System.Drawing.Size(27, 20);
+            this.SensingPercentLabel.Size = new System.Drawing.Size(22, 16);
             this.SensingPercentLabel.TabIndex = 11;
             this.SensingPercentLabel.Text = "50";
             this.SensingPercentLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -656,11 +680,11 @@
             // 
             this.IntuitivePercentLabel.AutoSize = true;
             this.IntuitivePercentLabel.BackColor = System.Drawing.Color.DimGray;
-            this.IntuitivePercentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IntuitivePercentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IntuitivePercentLabel.ForeColor = System.Drawing.Color.MediumAquamarine;
             this.IntuitivePercentLabel.Location = new System.Drawing.Point(12, 169);
             this.IntuitivePercentLabel.Name = "IntuitivePercentLabel";
-            this.IntuitivePercentLabel.Size = new System.Drawing.Size(27, 20);
+            this.IntuitivePercentLabel.Size = new System.Drawing.Size(22, 16);
             this.IntuitivePercentLabel.TabIndex = 10;
             this.IntuitivePercentLabel.Text = "50";
             this.IntuitivePercentLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -668,6 +692,7 @@
             // MBTI_TF_BAR
             // 
             this.MBTI_TF_BAR.AutoSize = false;
+            this.MBTI_TF_BAR.Enabled = false;
             this.MBTI_TF_BAR.Location = new System.Drawing.Point(34, 212);
             this.MBTI_TF_BAR.Maximum = 100;
             this.MBTI_TF_BAR.Name = "MBTI_TF_BAR";
@@ -675,17 +700,40 @@
             this.MBTI_TF_BAR.TabIndex = 17;
             this.MBTI_TF_BAR.TickStyle = System.Windows.Forms.TickStyle.None;
             this.MBTI_TF_BAR.Value = 50;
-            this.MBTI_TF_BAR.Scroll += new System.EventHandler(this.MBTI_TF_BAR_Scroll);
+            // 
+            // DisplayLabel
+            // 
+            this.DisplayLabel.AutoSize = true;
+            this.DisplayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DisplayLabel.ForeColor = System.Drawing.Color.MediumAquamarine;
+            this.DisplayLabel.Location = new System.Drawing.Point(11, 553);
+            this.DisplayLabel.Name = "DisplayLabel";
+            this.DisplayLabel.Size = new System.Drawing.Size(228, 15);
+            this.DisplayLabel.TabIndex = 25;
+            this.DisplayLabel.Text = "----- Press Confirm Edits When Done -----";
+            // 
+            // ConfirmEditsButton
+            // 
+            this.ConfirmEditsButton.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.ConfirmEditsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ConfirmEditsButton.ForeColor = System.Drawing.Color.DimGray;
+            this.ConfirmEditsButton.Location = new System.Drawing.Point(17, 570);
+            this.ConfirmEditsButton.Name = "ConfirmEditsButton";
+            this.ConfirmEditsButton.Size = new System.Drawing.Size(200, 25);
+            this.ConfirmEditsButton.TabIndex = 26;
+            this.ConfirmEditsButton.Text = "Confirm Edits";
+            this.ConfirmEditsButton.UseVisualStyleBackColor = false;
+            this.ConfirmEditsButton.Click += new System.EventHandler(this.ConfirmEditsButton_Click);
             // 
             // EditPanel
             // 
-            this.EditPanel.Controls.Add(this.DisplayLabel2);
-            this.EditPanel.Controls.Add(this.EditInfoButton);
+            this.EditPanel.Controls.Add(this.DisplayLabel);
+            this.EditPanel.Controls.Add(this.ConfirmEditsButton);
             this.EditPanel.Controls.Add(this.panel3);
             this.EditPanel.Controls.Add(this.panel4);
             this.EditPanel.Location = new System.Drawing.Point(256, 0);
             this.EditPanel.Name = "EditPanel";
-            this.EditPanel.Size = new System.Drawing.Size(250, 690);
+            this.EditPanel.Size = new System.Drawing.Size(250, 600);
             this.EditPanel.TabIndex = 25;
             // 
             // panel3
@@ -710,18 +758,18 @@
             this.panel3.Controls.Add(this.EDIT_BIG5_EBAR);
             this.panel3.Location = new System.Drawing.Point(0, 280);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(250, 332);
+            this.panel3.Size = new System.Drawing.Size(250, 270);
             this.panel3.TabIndex = 24;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.DimGray;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.MediumAquamarine;
-            this.label11.Location = new System.Drawing.Point(46, 282);
+            this.label11.Location = new System.Drawing.Point(54, 223);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(150, 18);
+            this.label11.Size = new System.Drawing.Size(131, 16);
             this.label11.TabIndex = 29;
             this.label11.Text = "--- NEUROTICISM ---";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -730,11 +778,11 @@
             // 
             this.Edit_BIG5_NLabel.AutoSize = true;
             this.Edit_BIG5_NLabel.BackColor = System.Drawing.Color.DimGray;
-            this.Edit_BIG5_NLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Edit_BIG5_NLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Edit_BIG5_NLabel.ForeColor = System.Drawing.Color.MediumAquamarine;
-            this.Edit_BIG5_NLabel.Location = new System.Drawing.Point(194, 304);
+            this.Edit_BIG5_NLabel.Location = new System.Drawing.Point(191, 238);
             this.Edit_BIG5_NLabel.Name = "Edit_BIG5_NLabel";
-            this.Edit_BIG5_NLabel.Size = new System.Drawing.Size(18, 20);
+            this.Edit_BIG5_NLabel.Size = new System.Drawing.Size(15, 16);
             this.Edit_BIG5_NLabel.TabIndex = 27;
             this.Edit_BIG5_NLabel.Text = "0";
             this.Edit_BIG5_NLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -742,23 +790,23 @@
             // EDIT_BIG5_NBAR
             // 
             this.EDIT_BIG5_NBAR.AutoSize = false;
-            this.EDIT_BIG5_NBAR.Enabled = false;
-            this.EDIT_BIG5_NBAR.Location = new System.Drawing.Point(15, 304);
+            this.EDIT_BIG5_NBAR.Location = new System.Drawing.Point(16, 235);
             this.EDIT_BIG5_NBAR.Maximum = 100;
             this.EDIT_BIG5_NBAR.Name = "EDIT_BIG5_NBAR";
             this.EDIT_BIG5_NBAR.Size = new System.Drawing.Size(176, 27);
             this.EDIT_BIG5_NBAR.TabIndex = 28;
             this.EDIT_BIG5_NBAR.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.EDIT_BIG5_NBAR.Scroll += new System.EventHandler(this.EDIT_BIG5_NBAR_Scroll);
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.Color.DimGray;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.MediumAquamarine;
-            this.label14.Location = new System.Drawing.Point(46, 236);
+            this.label14.Location = new System.Drawing.Point(46, 194);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(176, 18);
+            this.label14.Size = new System.Drawing.Size(156, 16);
             this.label14.TabIndex = 26;
             this.label14.Text = "--- AGREEABLENESS ---";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -767,11 +815,11 @@
             // 
             this.label15.AutoSize = true;
             this.label15.BackColor = System.Drawing.Color.DimGray;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.MediumAquamarine;
-            this.label15.Location = new System.Drawing.Point(46, 192);
+            this.label15.Location = new System.Drawing.Point(46, 166);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(161, 18);
+            this.label15.Size = new System.Drawing.Size(143, 16);
             this.label15.TabIndex = 25;
             this.label15.Text = "--- EXTRAVERSION ---";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -780,11 +828,11 @@
             // 
             this.label16.AutoSize = true;
             this.label16.BackColor = System.Drawing.Color.DimGray;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.MediumAquamarine;
-            this.label16.Location = new System.Drawing.Point(25, 147);
+            this.label16.Location = new System.Drawing.Point(31, 132);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(211, 18);
+            this.label16.Size = new System.Drawing.Size(185, 16);
             this.label16.TabIndex = 24;
             this.label16.Text = "--- CONSCIENTIOUSNESS ---";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -793,11 +841,11 @@
             // 
             this.label17.AutoSize = true;
             this.label17.BackColor = System.Drawing.Color.DimGray;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.MediumAquamarine;
-            this.label17.Location = new System.Drawing.Point(0, 101);
+            this.label17.Location = new System.Drawing.Point(13, 100);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(255, 18);
+            this.label17.Size = new System.Drawing.Size(223, 16);
             this.label17.TabIndex = 23;
             this.label17.Text = "--- OPENNESS TO EXPERIENCE ---";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -849,23 +897,23 @@
             // EDIT_BIG5_OTEBAR
             // 
             this.EDIT_BIG5_OTEBAR.AutoSize = false;
-            this.EDIT_BIG5_OTEBAR.Enabled = false;
-            this.EDIT_BIG5_OTEBAR.Location = new System.Drawing.Point(15, 123);
+            this.EDIT_BIG5_OTEBAR.Location = new System.Drawing.Point(15, 113);
             this.EDIT_BIG5_OTEBAR.Maximum = 100;
             this.EDIT_BIG5_OTEBAR.Name = "EDIT_BIG5_OTEBAR";
             this.EDIT_BIG5_OTEBAR.Size = new System.Drawing.Size(176, 27);
             this.EDIT_BIG5_OTEBAR.TabIndex = 7;
             this.EDIT_BIG5_OTEBAR.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.EDIT_BIG5_OTEBAR.Scroll += new System.EventHandler(this.EDIT_BIG5_OTEBAR_Scroll);
             // 
             // Edit_BIG5_ALabel
             // 
             this.Edit_BIG5_ALabel.AutoSize = true;
             this.Edit_BIG5_ALabel.BackColor = System.Drawing.Color.DimGray;
-            this.Edit_BIG5_ALabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Edit_BIG5_ALabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Edit_BIG5_ALabel.ForeColor = System.Drawing.Color.MediumAquamarine;
-            this.Edit_BIG5_ALabel.Location = new System.Drawing.Point(194, 255);
+            this.Edit_BIG5_ALabel.Location = new System.Drawing.Point(190, 211);
             this.Edit_BIG5_ALabel.Name = "Edit_BIG5_ALabel";
-            this.Edit_BIG5_ALabel.Size = new System.Drawing.Size(18, 20);
+            this.Edit_BIG5_ALabel.Size = new System.Drawing.Size(15, 16);
             this.Edit_BIG5_ALabel.TabIndex = 21;
             this.Edit_BIG5_ALabel.Text = "0";
             this.Edit_BIG5_ALabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -874,11 +922,11 @@
             // 
             this.Edit_BIG5_OTELabel.AutoSize = true;
             this.Edit_BIG5_OTELabel.BackColor = System.Drawing.Color.DimGray;
-            this.Edit_BIG5_OTELabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Edit_BIG5_OTELabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Edit_BIG5_OTELabel.ForeColor = System.Drawing.Color.MediumAquamarine;
-            this.Edit_BIG5_OTELabel.Location = new System.Drawing.Point(194, 123);
+            this.Edit_BIG5_OTELabel.Location = new System.Drawing.Point(190, 116);
             this.Edit_BIG5_OTELabel.Name = "Edit_BIG5_OTELabel";
-            this.Edit_BIG5_OTELabel.Size = new System.Drawing.Size(18, 20);
+            this.Edit_BIG5_OTELabel.Size = new System.Drawing.Size(15, 16);
             this.Edit_BIG5_OTELabel.TabIndex = 6;
             this.Edit_BIG5_OTELabel.Text = "0";
             this.Edit_BIG5_OTELabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -886,34 +934,34 @@
             // EDIT_BIG5_ABAR
             // 
             this.EDIT_BIG5_ABAR.AutoSize = false;
-            this.EDIT_BIG5_ABAR.Enabled = false;
-            this.EDIT_BIG5_ABAR.Location = new System.Drawing.Point(15, 258);
+            this.EDIT_BIG5_ABAR.Location = new System.Drawing.Point(15, 211);
             this.EDIT_BIG5_ABAR.Maximum = 100;
             this.EDIT_BIG5_ABAR.Name = "EDIT_BIG5_ABAR";
             this.EDIT_BIG5_ABAR.Size = new System.Drawing.Size(176, 27);
             this.EDIT_BIG5_ABAR.TabIndex = 22;
             this.EDIT_BIG5_ABAR.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.EDIT_BIG5_ABAR.Scroll += new System.EventHandler(this.EDIT_BIG5_ABAR_Scroll);
             // 
             // EDIT_BIG5_CBAR
             // 
             this.EDIT_BIG5_CBAR.AutoSize = false;
-            this.EDIT_BIG5_CBAR.Enabled = false;
-            this.EDIT_BIG5_CBAR.Location = new System.Drawing.Point(15, 169);
+            this.EDIT_BIG5_CBAR.Location = new System.Drawing.Point(16, 148);
             this.EDIT_BIG5_CBAR.Maximum = 100;
             this.EDIT_BIG5_CBAR.Name = "EDIT_BIG5_CBAR";
             this.EDIT_BIG5_CBAR.Size = new System.Drawing.Size(176, 27);
             this.EDIT_BIG5_CBAR.TabIndex = 12;
             this.EDIT_BIG5_CBAR.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.EDIT_BIG5_CBAR.Scroll += new System.EventHandler(this.EDIT_BIG5_CBAR_Scroll);
             // 
             // Edit_BIG5_ELabel
             // 
             this.Edit_BIG5_ELabel.AutoSize = true;
             this.Edit_BIG5_ELabel.BackColor = System.Drawing.Color.DimGray;
-            this.Edit_BIG5_ELabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Edit_BIG5_ELabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Edit_BIG5_ELabel.ForeColor = System.Drawing.Color.MediumAquamarine;
-            this.Edit_BIG5_ELabel.Location = new System.Drawing.Point(194, 211);
+            this.Edit_BIG5_ELabel.Location = new System.Drawing.Point(191, 180);
             this.Edit_BIG5_ELabel.Name = "Edit_BIG5_ELabel";
-            this.Edit_BIG5_ELabel.Size = new System.Drawing.Size(18, 20);
+            this.Edit_BIG5_ELabel.Size = new System.Drawing.Size(15, 16);
             this.Edit_BIG5_ELabel.TabIndex = 16;
             this.Edit_BIG5_ELabel.Text = "0";
             this.Edit_BIG5_ELabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -922,11 +970,11 @@
             // 
             this.Edit_BIG5_CLabel.AutoSize = true;
             this.Edit_BIG5_CLabel.BackColor = System.Drawing.Color.DimGray;
-            this.Edit_BIG5_CLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Edit_BIG5_CLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Edit_BIG5_CLabel.ForeColor = System.Drawing.Color.MediumAquamarine;
-            this.Edit_BIG5_CLabel.Location = new System.Drawing.Point(194, 169);
+            this.Edit_BIG5_CLabel.Location = new System.Drawing.Point(191, 151);
             this.Edit_BIG5_CLabel.Name = "Edit_BIG5_CLabel";
-            this.Edit_BIG5_CLabel.Size = new System.Drawing.Size(18, 20);
+            this.Edit_BIG5_CLabel.Size = new System.Drawing.Size(15, 16);
             this.Edit_BIG5_CLabel.TabIndex = 11;
             this.Edit_BIG5_CLabel.Text = "0";
             this.Edit_BIG5_CLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -934,13 +982,13 @@
             // EDIT_BIG5_EBAR
             // 
             this.EDIT_BIG5_EBAR.AutoSize = false;
-            this.EDIT_BIG5_EBAR.Enabled = false;
-            this.EDIT_BIG5_EBAR.Location = new System.Drawing.Point(15, 212);
+            this.EDIT_BIG5_EBAR.Location = new System.Drawing.Point(16, 178);
             this.EDIT_BIG5_EBAR.Maximum = 100;
             this.EDIT_BIG5_EBAR.Name = "EDIT_BIG5_EBAR";
             this.EDIT_BIG5_EBAR.Size = new System.Drawing.Size(176, 27);
             this.EDIT_BIG5_EBAR.TabIndex = 17;
             this.EDIT_BIG5_EBAR.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.EDIT_BIG5_EBAR.Scroll += new System.EventHandler(this.EDIT_BIG5_EBAR_Scroll);
             // 
             // panel4
             // 
@@ -1052,7 +1100,6 @@
             // EDIT_MBTI_IEBAR
             // 
             this.EDIT_MBTI_IEBAR.AutoSize = false;
-            this.EDIT_MBTI_IEBAR.Enabled = false;
             this.EDIT_MBTI_IEBAR.Location = new System.Drawing.Point(34, 123);
             this.EDIT_MBTI_IEBAR.Maximum = 100;
             this.EDIT_MBTI_IEBAR.Name = "EDIT_MBTI_IEBAR";
@@ -1060,6 +1107,7 @@
             this.EDIT_MBTI_IEBAR.TabIndex = 7;
             this.EDIT_MBTI_IEBAR.TickStyle = System.Windows.Forms.TickStyle.None;
             this.EDIT_MBTI_IEBAR.Value = 50;
+            this.EDIT_MBTI_IEBAR.Scroll += new System.EventHandler(this.EDIT_MBTI_IEBAR_Scroll);
             // 
             // Edit_MBTI_JudgingLabel
             // 
@@ -1069,9 +1117,9 @@
             this.Edit_MBTI_JudgingLabel.ForeColor = System.Drawing.Color.MediumAquamarine;
             this.Edit_MBTI_JudgingLabel.Location = new System.Drawing.Point(12, 258);
             this.Edit_MBTI_JudgingLabel.Name = "Edit_MBTI_JudgingLabel";
-            this.Edit_MBTI_JudgingLabel.Size = new System.Drawing.Size(18, 20);
+            this.Edit_MBTI_JudgingLabel.Size = new System.Drawing.Size(27, 20);
             this.Edit_MBTI_JudgingLabel.TabIndex = 20;
-            this.Edit_MBTI_JudgingLabel.Text = "0";
+            this.Edit_MBTI_JudgingLabel.Text = "50";
             this.Edit_MBTI_JudgingLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Edit_MBTI_PerceivingLabel
@@ -1082,9 +1130,9 @@
             this.Edit_MBTI_PerceivingLabel.ForeColor = System.Drawing.Color.MediumAquamarine;
             this.Edit_MBTI_PerceivingLabel.Location = new System.Drawing.Point(216, 258);
             this.Edit_MBTI_PerceivingLabel.Name = "Edit_MBTI_PerceivingLabel";
-            this.Edit_MBTI_PerceivingLabel.Size = new System.Drawing.Size(18, 20);
+            this.Edit_MBTI_PerceivingLabel.Size = new System.Drawing.Size(27, 20);
             this.Edit_MBTI_PerceivingLabel.TabIndex = 21;
-            this.Edit_MBTI_PerceivingLabel.Text = "0";
+            this.Edit_MBTI_PerceivingLabel.Text = "50";
             this.Edit_MBTI_PerceivingLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label31
@@ -1108,9 +1156,9 @@
             this.Edit_MBTI_IntroversionLabel.ForeColor = System.Drawing.Color.MediumAquamarine;
             this.Edit_MBTI_IntroversionLabel.Location = new System.Drawing.Point(216, 123);
             this.Edit_MBTI_IntroversionLabel.Name = "Edit_MBTI_IntroversionLabel";
-            this.Edit_MBTI_IntroversionLabel.Size = new System.Drawing.Size(18, 20);
+            this.Edit_MBTI_IntroversionLabel.Size = new System.Drawing.Size(27, 20);
             this.Edit_MBTI_IntroversionLabel.TabIndex = 6;
-            this.Edit_MBTI_IntroversionLabel.Text = "0";
+            this.Edit_MBTI_IntroversionLabel.Text = "50";
             this.Edit_MBTI_IntroversionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Edit_MBTI_ExtraversionLabel
@@ -1121,15 +1169,14 @@
             this.Edit_MBTI_ExtraversionLabel.ForeColor = System.Drawing.Color.MediumAquamarine;
             this.Edit_MBTI_ExtraversionLabel.Location = new System.Drawing.Point(12, 123);
             this.Edit_MBTI_ExtraversionLabel.Name = "Edit_MBTI_ExtraversionLabel";
-            this.Edit_MBTI_ExtraversionLabel.Size = new System.Drawing.Size(18, 20);
+            this.Edit_MBTI_ExtraversionLabel.Size = new System.Drawing.Size(27, 20);
             this.Edit_MBTI_ExtraversionLabel.TabIndex = 5;
-            this.Edit_MBTI_ExtraversionLabel.Text = "0";
+            this.Edit_MBTI_ExtraversionLabel.Text = "50";
             this.Edit_MBTI_ExtraversionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // EDIT_MBTI_JPBAR
             // 
             this.EDIT_MBTI_JPBAR.AutoSize = false;
-            this.EDIT_MBTI_JPBAR.Enabled = false;
             this.EDIT_MBTI_JPBAR.Location = new System.Drawing.Point(34, 258);
             this.EDIT_MBTI_JPBAR.Maximum = 100;
             this.EDIT_MBTI_JPBAR.Name = "EDIT_MBTI_JPBAR";
@@ -1137,11 +1184,11 @@
             this.EDIT_MBTI_JPBAR.TabIndex = 22;
             this.EDIT_MBTI_JPBAR.TickStyle = System.Windows.Forms.TickStyle.None;
             this.EDIT_MBTI_JPBAR.Value = 50;
+            this.EDIT_MBTI_JPBAR.Scroll += new System.EventHandler(this.EDIT_MBTI_JPBAR_Scroll);
             // 
             // EDIT_MBTI_NSBAR
             // 
             this.EDIT_MBTI_NSBAR.AutoSize = false;
-            this.EDIT_MBTI_NSBAR.Enabled = false;
             this.EDIT_MBTI_NSBAR.Location = new System.Drawing.Point(34, 169);
             this.EDIT_MBTI_NSBAR.Maximum = 100;
             this.EDIT_MBTI_NSBAR.Name = "EDIT_MBTI_NSBAR";
@@ -1149,6 +1196,7 @@
             this.EDIT_MBTI_NSBAR.TabIndex = 12;
             this.EDIT_MBTI_NSBAR.TickStyle = System.Windows.Forms.TickStyle.None;
             this.EDIT_MBTI_NSBAR.Value = 50;
+            this.EDIT_MBTI_NSBAR.Scroll += new System.EventHandler(this.EDIT_MBTI_NSBAR_Scroll);
             // 
             // Edit_MBTI_ThinkingLabel
             // 
@@ -1158,9 +1206,9 @@
             this.Edit_MBTI_ThinkingLabel.ForeColor = System.Drawing.Color.MediumAquamarine;
             this.Edit_MBTI_ThinkingLabel.Location = new System.Drawing.Point(12, 212);
             this.Edit_MBTI_ThinkingLabel.Name = "Edit_MBTI_ThinkingLabel";
-            this.Edit_MBTI_ThinkingLabel.Size = new System.Drawing.Size(18, 20);
+            this.Edit_MBTI_ThinkingLabel.Size = new System.Drawing.Size(27, 20);
             this.Edit_MBTI_ThinkingLabel.TabIndex = 15;
-            this.Edit_MBTI_ThinkingLabel.Text = "0";
+            this.Edit_MBTI_ThinkingLabel.Text = "50";
             this.Edit_MBTI_ThinkingLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Edit_MBTI_FeelingLabel
@@ -1171,9 +1219,9 @@
             this.Edit_MBTI_FeelingLabel.ForeColor = System.Drawing.Color.MediumAquamarine;
             this.Edit_MBTI_FeelingLabel.Location = new System.Drawing.Point(216, 212);
             this.Edit_MBTI_FeelingLabel.Name = "Edit_MBTI_FeelingLabel";
-            this.Edit_MBTI_FeelingLabel.Size = new System.Drawing.Size(18, 20);
+            this.Edit_MBTI_FeelingLabel.Size = new System.Drawing.Size(27, 20);
             this.Edit_MBTI_FeelingLabel.TabIndex = 16;
-            this.Edit_MBTI_FeelingLabel.Text = "0";
+            this.Edit_MBTI_FeelingLabel.Text = "50";
             this.Edit_MBTI_FeelingLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Edit_MBTI_SensingLabel
@@ -1184,9 +1232,9 @@
             this.Edit_MBTI_SensingLabel.ForeColor = System.Drawing.Color.MediumAquamarine;
             this.Edit_MBTI_SensingLabel.Location = new System.Drawing.Point(216, 169);
             this.Edit_MBTI_SensingLabel.Name = "Edit_MBTI_SensingLabel";
-            this.Edit_MBTI_SensingLabel.Size = new System.Drawing.Size(18, 20);
+            this.Edit_MBTI_SensingLabel.Size = new System.Drawing.Size(27, 20);
             this.Edit_MBTI_SensingLabel.TabIndex = 11;
-            this.Edit_MBTI_SensingLabel.Text = "0";
+            this.Edit_MBTI_SensingLabel.Text = "50";
             this.Edit_MBTI_SensingLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Edit_MBTI_IntuitionLabel
@@ -1197,15 +1245,14 @@
             this.Edit_MBTI_IntuitionLabel.ForeColor = System.Drawing.Color.MediumAquamarine;
             this.Edit_MBTI_IntuitionLabel.Location = new System.Drawing.Point(12, 169);
             this.Edit_MBTI_IntuitionLabel.Name = "Edit_MBTI_IntuitionLabel";
-            this.Edit_MBTI_IntuitionLabel.Size = new System.Drawing.Size(18, 20);
+            this.Edit_MBTI_IntuitionLabel.Size = new System.Drawing.Size(27, 20);
             this.Edit_MBTI_IntuitionLabel.TabIndex = 10;
-            this.Edit_MBTI_IntuitionLabel.Text = "0";
+            this.Edit_MBTI_IntuitionLabel.Text = "50";
             this.Edit_MBTI_IntuitionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // EDIT_MBTI_TFBAR
             // 
             this.EDIT_MBTI_TFBAR.AutoSize = false;
-            this.EDIT_MBTI_TFBAR.Enabled = false;
             this.EDIT_MBTI_TFBAR.Location = new System.Drawing.Point(34, 212);
             this.EDIT_MBTI_TFBAR.Maximum = 100;
             this.EDIT_MBTI_TFBAR.Name = "EDIT_MBTI_TFBAR";
@@ -1213,54 +1260,7 @@
             this.EDIT_MBTI_TFBAR.TabIndex = 17;
             this.EDIT_MBTI_TFBAR.TickStyle = System.Windows.Forms.TickStyle.None;
             this.EDIT_MBTI_TFBAR.Value = 50;
-            // 
-            // DisplayLabel
-            // 
-            this.DisplayLabel.AutoSize = true;
-            this.DisplayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DisplayLabel.ForeColor = System.Drawing.Color.MediumAquamarine;
-            this.DisplayLabel.Location = new System.Drawing.Point(15, 641);
-            this.DisplayLabel.Name = "DisplayLabel";
-            this.DisplayLabel.Size = new System.Drawing.Size(228, 15);
-            this.DisplayLabel.TabIndex = 25;
-            this.DisplayLabel.Text = "----- Press Confirm Edits When Done -----";
-            // 
-            // ConfirmEditsButton
-            // 
-            this.ConfirmEditsButton.BackColor = System.Drawing.Color.MediumAquamarine;
-            this.ConfirmEditsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ConfirmEditsButton.ForeColor = System.Drawing.Color.DimGray;
-            this.ConfirmEditsButton.Location = new System.Drawing.Point(21, 658);
-            this.ConfirmEditsButton.Name = "ConfirmEditsButton";
-            this.ConfirmEditsButton.Size = new System.Drawing.Size(200, 25);
-            this.ConfirmEditsButton.TabIndex = 26;
-            this.ConfirmEditsButton.Text = "Confirm Edits";
-            this.ConfirmEditsButton.UseVisualStyleBackColor = false;
-            this.ConfirmEditsButton.Click += new System.EventHandler(this.ConfirmEditsButton_Click);
-            // 
-            // DisplayLabel2
-            // 
-            this.DisplayLabel2.AutoSize = true;
-            this.DisplayLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DisplayLabel2.ForeColor = System.Drawing.Color.MediumAquamarine;
-            this.DisplayLabel2.Location = new System.Drawing.Point(15, 642);
-            this.DisplayLabel2.Name = "DisplayLabel2";
-            this.DisplayLabel2.Size = new System.Drawing.Size(225, 15);
-            this.DisplayLabel2.TabIndex = 25;
-            this.DisplayLabel2.Text = "----- Click Edit Info to Make Changes -----";
-            // 
-            // EditInfoButton
-            // 
-            this.EditInfoButton.BackColor = System.Drawing.Color.MediumAquamarine;
-            this.EditInfoButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EditInfoButton.ForeColor = System.Drawing.Color.DimGray;
-            this.EditInfoButton.Location = new System.Drawing.Point(22, 658);
-            this.EditInfoButton.Name = "EditInfoButton";
-            this.EditInfoButton.Size = new System.Drawing.Size(200, 25);
-            this.EditInfoButton.TabIndex = 26;
-            this.EditInfoButton.Text = "Edit Info";
-            this.EditInfoButton.UseVisualStyleBackColor = false;
-            this.EditInfoButton.Click += new System.EventHandler(this.EditInfoButton_Click);
+            this.EDIT_MBTI_TFBAR.Scroll += new System.EventHandler(this.EDIT_MBTI_TFBAR_Scroll);
             // 
             // PersonalityInfoControl
             // 
@@ -1270,7 +1270,7 @@
             this.Controls.Add(this.EditPanel);
             this.Controls.Add(this.DisplayPanel);
             this.Name = "PersonalityInfoControl";
-            this.Size = new System.Drawing.Size(571, 700);
+            this.Size = new System.Drawing.Size(250, 610);
             this.DisplayPanel.ResumeLayout(false);
             this.DisplayPanel.PerformLayout();
             this.panel1.ResumeLayout(false);

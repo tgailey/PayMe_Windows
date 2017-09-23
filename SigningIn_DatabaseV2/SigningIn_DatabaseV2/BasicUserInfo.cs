@@ -52,7 +52,7 @@ namespace SigningIn_DatabaseV2
 
                     SqlDataReader reader;
                     //cmd.CommandText = "SELECT * FROM Users";
-                    cmd.CommandText = string.Format(@"SELECT BasicInfo.FirstName, PersonalityInfo.MBTI_IE 
+                    cmd.CommandText = string.Format(@"SELECT BasicInfo.FirstName, PersonalityInfo.MBTI_EI 
                                                       FROM BasicInfo
                                                       FULL OUTER JOIN  PersonalityInfo  ON  BasicInfo.UserName = PersonalityInfo.UserName
                                                       WHERE BasicInfo.UserName = '{0}' OR PersonalityInfo.UserName = '{0}';", OpeningForm._username);
@@ -61,7 +61,7 @@ namespace SigningIn_DatabaseV2
                     reader = cmd.ExecuteReader();
                     if (reader.Read())
                     {
-                        if (reader["BasicInfo.FirstName"].ToString().Equals(null))
+                        if (reader["FirstName"].ToString().Equals(""))
                         {
                             stateOfSections[1] = 0;
                             BasicInfoPanel.Visible = true;
@@ -75,7 +75,7 @@ namespace SigningIn_DatabaseV2
                             BasicInfoPanel.Visible = false;
                             BasicInfoShowHide.Text = "Show";
                         }
-                        if (reader["PersonalityInfo.MBTI_IE"].ToString().Equals(null))
+                        if (reader["MBTI_EI"].ToString().Equals(""))
                         {
                             stateOfSections[2] = 0;
                             PersonalityInfoPanel.Visible = true;
@@ -126,6 +126,8 @@ namespace SigningIn_DatabaseV2
             AccountInfoPanel.Controls.Add(usercontrols[0]);
             usercontrols[1] = new BasicInfoControl(stateOfSections[1], this);
             BasicInfoPanel.Controls.Add(usercontrols[1]);
+            usercontrols[2] = new PersonalityInfoControl(stateOfSections[2], this);
+            PersonalityInfoPanel.Controls.Add(usercontrols[2]);
         }
         public void changeColors(int i)
         {

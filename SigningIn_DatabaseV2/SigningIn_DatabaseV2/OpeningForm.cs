@@ -16,6 +16,7 @@ namespace SigningIn_DatabaseV2
         public static SqlConnectionStringBuilder cb = new SqlConnectionStringBuilder();
         static UserControl currentControl;
         public static string _username = "";
+        public static int _researcher = 0;
         public OpeningForm()
         {
             InitializeComponent();
@@ -31,6 +32,23 @@ namespace SigningIn_DatabaseV2
 
         public static void switchUserControl(UserControl uc)
         {
+            ((OpeningForm)ActiveForm).BlankPanel.Controls.Add(uc);
+            ((OpeningForm)ActiveForm).BlankPanel.Controls.Remove(currentControl);
+            currentControl.Dispose();
+            currentControl = uc;
+        }
+
+        public static void  openApp()
+        {
+            UserControl uc;
+            if (_researcher == 0)
+            {
+                uc = new BasicUserInfo();
+            }
+            else
+            {
+                uc = new ViewSurveysControl();
+            }
             ((OpeningForm)ActiveForm).BlankPanel.Controls.Add(uc);
             ((OpeningForm)ActiveForm).BlankPanel.Controls.Remove(currentControl);
             currentControl.Dispose();

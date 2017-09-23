@@ -61,12 +61,13 @@ namespace SigningIn_DatabaseV2
                     {
                        // UserID = int.Parse(reader["UserID"].ToString());
                         DisplayLabel.Text = "Log in successfull. " + int.Parse(reader["UserID"].ToString()).ToString();
+
+                        OpeningForm._username = reader["UserName"].ToString();
+                        OpeningForm._researcher = int.Parse(reader["Researcher"].ToString());
                         reader.Close();
                         cmd.Dispose();
                         connection.Close();
-                        OpeningForm._username = UsernameTextBox.Text;
-                        BasicUserInfo bui = new BasicUserInfo();
-                        OpeningForm.switchUserControl(bui);
+                        OpeningForm.openApp();
                         return;
                     }
                     reader.Close();

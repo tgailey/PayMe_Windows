@@ -37,6 +37,9 @@
             this.DisplayLabel = new System.Windows.Forms.Label();
             this.LoginLabel = new System.Windows.Forms.Label();
             this.LoginButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.ResearcherRadioButton = new System.Windows.Forms.RadioButton();
+            this.UserRadioButton = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // InstructionLabel
@@ -98,10 +101,10 @@
             this.CreateAccountButton.BackColor = System.Drawing.Color.MediumAquamarine;
             this.CreateAccountButton.Font = new System.Drawing.Font("Bell MT", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CreateAccountButton.ForeColor = System.Drawing.Color.DimGray;
-            this.CreateAccountButton.Location = new System.Drawing.Point(19, 285);
+            this.CreateAccountButton.Location = new System.Drawing.Point(18, 305);
             this.CreateAccountButton.Name = "CreateAccountButton";
             this.CreateAccountButton.Size = new System.Drawing.Size(245, 54);
-            this.CreateAccountButton.TabIndex = 5;
+            this.CreateAccountButton.TabIndex = 9;
             this.CreateAccountButton.Text = "Create Account";
             this.CreateAccountButton.UseVisualStyleBackColor = false;
             this.CreateAccountButton.Click += new System.EventHandler(this.CreateAccountButton_Click);
@@ -111,10 +114,10 @@
             this.DisplayLabel.AutoSize = true;
             this.DisplayLabel.Font = new System.Drawing.Font("Bell MT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DisplayLabel.ForeColor = System.Drawing.Color.MediumAquamarine;
-            this.DisplayLabel.Location = new System.Drawing.Point(24, 258);
+            this.DisplayLabel.Location = new System.Drawing.Point(23, 284);
             this.DisplayLabel.Name = "DisplayLabel";
             this.DisplayLabel.Size = new System.Drawing.Size(239, 15);
-            this.DisplayLabel.TabIndex = 6;
+            this.DisplayLabel.TabIndex = 8;
             this.DisplayLabel.Text = "----- PLEASE CONFIRM YOUR EMAIL ------";
             // 
             // LoginLabel
@@ -122,10 +125,10 @@
             this.LoginLabel.AutoSize = true;
             this.LoginLabel.Font = new System.Drawing.Font("Bell MT", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoginLabel.ForeColor = System.Drawing.Color.MediumAquamarine;
-            this.LoginLabel.Location = new System.Drawing.Point(28, 359);
+            this.LoginLabel.Location = new System.Drawing.Point(27, 372);
             this.LoginLabel.Name = "LoginLabel";
             this.LoginLabel.Size = new System.Drawing.Size(167, 19);
-            this.LoginLabel.TabIndex = 11;
+            this.LoginLabel.TabIndex = 10;
             this.LoginLabel.Text = "Already have an account?";
             // 
             // LoginButton
@@ -137,19 +140,55 @@
             this.LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LoginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoginButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.LoginButton.Location = new System.Drawing.Point(182, 356);
+            this.LoginButton.Location = new System.Drawing.Point(181, 369);
             this.LoginButton.Name = "LoginButton";
             this.LoginButton.Size = new System.Drawing.Size(64, 23);
-            this.LoginButton.TabIndex = 12;
+            this.LoginButton.TabIndex = 11;
             this.LoginButton.Text = "Login";
             this.LoginButton.UseVisualStyleBackColor = false;
             this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Bell MT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.MediumAquamarine;
+            this.label1.Location = new System.Drawing.Point(44, 255);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(50, 15);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "I AM A :";
+            // 
+            // ResearcherRadioButton
+            // 
+            this.ResearcherRadioButton.AutoSize = true;
+            this.ResearcherRadioButton.Location = new System.Drawing.Point(166, 254);
+            this.ResearcherRadioButton.Name = "ResearcherRadioButton";
+            this.ResearcherRadioButton.Size = new System.Drawing.Size(80, 17);
+            this.ResearcherRadioButton.TabIndex = 7;
+            this.ResearcherRadioButton.Text = "Researcher";
+            this.ResearcherRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // UserRadioButton
+            // 
+            this.UserRadioButton.AutoSize = true;
+            this.UserRadioButton.Checked = true;
+            this.UserRadioButton.Location = new System.Drawing.Point(113, 254);
+            this.UserRadioButton.Name = "UserRadioButton";
+            this.UserRadioButton.Size = new System.Drawing.Size(47, 17);
+            this.UserRadioButton.TabIndex = 6;
+            this.UserRadioButton.TabStop = true;
+            this.UserRadioButton.Text = "User";
+            this.UserRadioButton.UseVisualStyleBackColor = true;
             // 
             // CreateAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
+            this.Controls.Add(this.UserRadioButton);
+            this.Controls.Add(this.ResearcherRadioButton);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.LoginLabel);
             this.Controls.Add(this.LoginButton);
             this.Controls.Add(this.DisplayLabel);
@@ -178,5 +217,8 @@
         private System.Windows.Forms.Label DisplayLabel;
         private System.Windows.Forms.Label LoginLabel;
         private System.Windows.Forms.Button LoginButton;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.RadioButton ResearcherRadioButton;
+        private System.Windows.Forms.RadioButton UserRadioButton;
     }
 }

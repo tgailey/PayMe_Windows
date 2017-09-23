@@ -64,7 +64,7 @@ namespace SigningIn_DatabaseV2
                 DisplayLabel.Text = "Passwords Don't Match.";
                 return;
             }
-
+            
             try
             {
 
@@ -98,18 +98,25 @@ namespace SigningIn_DatabaseV2
                         DisplayLabel.Text = "Account Created";
                     }
                     reader.Close();
-
+                    int researcher = 0;
+                    if (ResearcherRadioButton.Checked)
+                    {
+                        researcher = 1;
+                    }
                     cmd.CommandText = string.Format(@"INSERT INTO Users 
-                                            (UserName, EmailAddress, UserPassword)
+                                            (UserName, EmailAddress, UserPassword, AvailableSurveys, Researcher)
                                                VALUES
-                                                 ('{0}', '{1}', '{2}');", UsernameTextBox.Text, EmailTextBox.Text, PasswordTextBox.Text);
+                                                 ('{0}', '{1}', '{2}', '', '{3}');", UsernameTextBox.Text, EmailTextBox.Text, PasswordTextBox.Text, researcher);
                     cmd.CommandType = CommandType.Text;
                     cmd.Connection = connection;
                     cmd.ExecuteNonQuery();
                     connection.Close();
                     OpeningForm._username = UsernameTextBox.Text;
-                    BasicUserInfo bui = new BasicUserInfo();
-                    OpeningForm.switchUserControl(bui);
+                    if (ResearcherRadioButton.Checked)
+                    {
+                        OpeningForm._researcher = 1;
+                    }
+                    OpeningForm.openApp();
                 }
             }
             catch (SqlException ex)

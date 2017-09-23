@@ -41,37 +41,41 @@ namespace SigningIn_DatabaseV2
                     reader = cmd.ExecuteReader();
                     if (reader.Read())
                     {
-                        string[] percentages = reader["MBTI_EI"].ToString().Split('/');
-                        Edit_MBTI_ExtraversionLabel.Text = percentages[0];
-                        Edit_MBTI_IntroversionLabel.Text = percentages[1];
-                        EDIT_MBTI_IEBAR.Value = int.Parse(percentages[1]);
-                        ExtrovertedPercentLabel.Text = percentages[0];
-                        IntrovertedPercentLabel.Text = percentages[1];
-                        MBTI_IE_BAR.Value = int.Parse(percentages[1]);
+                        string percentage = reader["MBTI_EI"].ToString();
+                        string inverse = (100 - int.Parse(percentage)).ToString();
+                        Edit_MBTI_ExtraversionLabel.Text = inverse;
+                        Edit_MBTI_IntroversionLabel.Text = percentage;
+                        EDIT_MBTI_IEBAR.Value = int.Parse(percentage);
+                        ExtrovertedPercentLabel.Text = inverse;
+                        IntrovertedPercentLabel.Text = percentage;
+                        MBTI_IE_BAR.Value = int.Parse(percentage);
 
-                        percentages = reader["MBTI_NS"].ToString().Split('/');
-                        Edit_MBTI_IntuitionLabel.Text = percentages[0];
-                        Edit_MBTI_SensingLabel.Text = percentages[1];
-                        EDIT_MBTI_NSBAR.Value = int.Parse(percentages[1]);
-                        IntuitivePercentLabel.Text = percentages[0];
-                        SensingPercentLabel.Text = percentages[1];
-                        MBTI_NS_BAR.Value = int.Parse(percentages[1]);
+                        percentage = reader["MBTI_NS"].ToString();
+                        inverse = (100 - int.Parse(percentage)).ToString();
+                        Edit_MBTI_IntuitionLabel.Text = inverse;
+                        Edit_MBTI_SensingLabel.Text = percentage;
+                        EDIT_MBTI_NSBAR.Value = int.Parse(percentage);
+                        IntuitivePercentLabel.Text = inverse;
+                        SensingPercentLabel.Text = percentage;
+                        MBTI_NS_BAR.Value = int.Parse(percentage);
 
-                        percentages = reader["MBTI_TF"].ToString().Split('/');
-                        Edit_MBTI_ThinkingLabel.Text = percentages[0];
-                        Edit_MBTI_FeelingLabel.Text = percentages[1];
-                        EDIT_MBTI_TFBAR.Value = int.Parse(percentages[1]);
-                        ThinkingPercentLabel.Text = percentages[0];
-                        FeelingPercentLabel.Text = percentages[1];
-                        MBTI_TF_BAR.Value = int.Parse(percentages[1]);
+                        percentage = reader["MBTI_TF"].ToString();
+                        inverse = (100 - int.Parse(percentage)).ToString();
+                        Edit_MBTI_ThinkingLabel.Text = inverse;
+                        Edit_MBTI_FeelingLabel.Text = percentage;
+                        EDIT_MBTI_TFBAR.Value = int.Parse(percentage);
+                        ThinkingPercentLabel.Text = inverse;
+                        FeelingPercentLabel.Text = percentage;
+                        MBTI_TF_BAR.Value = int.Parse(percentage);
 
-                        percentages = reader["MBTI_JP"].ToString().Split('/');
-                        Edit_MBTI_JudgingLabel.Text = percentages[0];
-                        Edit_MBTI_PerceivingLabel.Text = percentages[1];
-                        EDIT_MBTI_JPBAR.Value = int.Parse(percentages[1]);
-                        JudgingPercentLabel.Text = percentages[0];
-                        PerceivingPercentLabel.Text = percentages[1];
-                        MBTI_JP_BAR.Value = int.Parse(percentages[1]);
+                        percentage = reader["MBTI_JP"].ToString();
+                        inverse = (100 - int.Parse(percentage)).ToString();
+                        Edit_MBTI_JudgingLabel.Text = inverse;
+                        Edit_MBTI_PerceivingLabel.Text = percentage;
+                        EDIT_MBTI_JPBAR.Value = int.Parse(percentage);
+                        JudgingPercentLabel.Text = inverse;
+                        PerceivingPercentLabel.Text = percentage;
+                        MBTI_JP_BAR.Value = int.Parse(percentage);
 
                         string value = reader["BIG5_OTE"].ToString();
                         int parsedInt = int.Parse(value);
@@ -130,6 +134,18 @@ namespace SigningIn_DatabaseV2
             {
                 EditPanel.Visible = true;
                 EditPanel.Location = new Point(0, 0);
+                #region Make sure the track doesn't move with mouse wheel
+                EDIT_MBTI_IEBAR.MouseWheel += new MouseEventHandler(DoNothing_MouseWheel);
+                EDIT_MBTI_NSBAR.MouseWheel += new MouseEventHandler(DoNothing_MouseWheel);
+                EDIT_MBTI_TFBAR.MouseWheel += new MouseEventHandler(DoNothing_MouseWheel);
+                EDIT_MBTI_JPBAR.MouseWheel += new MouseEventHandler(DoNothing_MouseWheel);
+                EDIT_BIG5_OTEBAR.MouseWheel += new MouseEventHandler(DoNothing_MouseWheel);
+                EDIT_BIG5_CBAR.MouseWheel += new MouseEventHandler(DoNothing_MouseWheel);
+                EDIT_BIG5_EBAR.MouseWheel += new MouseEventHandler(DoNothing_MouseWheel);
+                EDIT_BIG5_ABAR.MouseWheel += new MouseEventHandler(DoNothing_MouseWheel);
+                EDIT_BIG5_NBAR.MouseWheel += new MouseEventHandler(DoNothing_MouseWheel);
+
+                #endregion
                 DisplayPanel.Visible = false;
                 DisplayPanel.Dispose();
             }
@@ -150,68 +166,10 @@ namespace SigningIn_DatabaseV2
             Process.Start(sInfo);
         }
 
-        private void MBTI_IE_BAR_Scroll(object sender, EventArgs e)
-        {
-            int percent = MBTI_IE_BAR.Value / MBTI_IE_BAR.Width;
-            ExtrovertedPercentLabel.Text = (100 - percent).ToString();
-            IntrovertedPercentLabel.Text = percent.ToString();
-        }
-
-        private void MBTI_NS_BAR_Scroll(object sender, EventArgs e)
-        {
-            int percent = MBTI_NS_BAR.Value / MBTI_NS_BAR.Width;
-            IntuitivePercentLabel.Text = (100 - percent).ToString();
-            SensingPercentLabel.Text = percent.ToString();
-        }
-
-        private void MBTI_TF_BAR_Scroll(object sender, EventArgs e)
-        {
-            int percent = MBTI_TF_BAR.Value / MBTI_TF_BAR.Width;
-            ThinkingPercentLabel.Text = (100 - percent).ToString();
-            FeelingPercentLabel.Text = percent.ToString();
-        }
-
-        private void MBTI_JP_BAR_Scroll(object sender, EventArgs e)
-        {
-            int percent = MBTI_JP_BAR.Value / MBTI_JP_BAR.Width;
-            JudgingPercentLabel.Text = (100 - percent).ToString();
-            PerceivingPercentLabel.Text = percent.ToString();
-        }
-
         private void TestBIG5Button_Click(object sender, EventArgs e)
         {
             ProcessStartInfo sInfo = new ProcessStartInfo("https://www.truity.com/test/big-five-personality-test");
             Process.Start(sInfo);
-        }
-
-        private void BIG5_OTE_BAR_Scroll(object sender, EventArgs e)
-        {
-            int percent = BIG5_OTE_BAR.Value / BIG5_OTE_BAR.Width;
-            Big5_OpennessPercentLabel.Text = percent.ToString();
-        }
-
-        private void BIG5_C_BAR_Scroll(object sender, EventArgs e)
-        {
-            int percent = BIG5_C_BAR.Value / BIG5_C_BAR.Width;
-            Big5_ConscientiousnessPercentLabel.Text = percent.ToString();
-        }
-
-        private void BIG5_E_BAR_Scroll(object sender, EventArgs e)
-        {
-            int percent = BIG5_E_BAR.Value / BIG5_E_BAR.Width;
-            Big5_ExtraversionPercentLabel.Text = percent.ToString();
-        }
-
-        private void BIG5_A_BAR_Scroll(object sender, EventArgs e)
-        {
-            int percent = BIG5_A_BAR.Value / BIG5_A_BAR.Width;
-            Big5_AgreeablenessPercentLabel.Text = percent.ToString();
-        }
-
-        private void BIG5_N_BAR_Scroll(object sender, EventArgs e)
-        {
-            int percent = BIG5_N_BAR.Value / BIG5_N_BAR.Width;
-            Big5_NeuroticismPercentLabel.Text = percent.ToString();
         }
 
         private void ConfirmEditsButton_Click(object sender, EventArgs e)
@@ -226,10 +184,16 @@ namespace SigningIn_DatabaseV2
 
                     SqlCommand cmd = new SqlCommand();
 
-                    string IE = Edit_MBTI_ExtraversionLabel.Text + "/" + Edit_MBTI_IntroversionLabel.Text;
+                    /*
+                    string EI = Edit_MBTI_ExtraversionLabel.Text + "/" + Edit_MBTI_IntroversionLabel.Text;
                     string NS = Edit_MBTI_IntuitionLabel.Text + "/" + Edit_MBTI_SensingLabel.Text;
                     string TF = Edit_MBTI_ThinkingLabel.Text + "/" + Edit_MBTI_FeelingLabel.Text;
                     string JP = Edit_MBTI_JudgingLabel.Text + "/" + Edit_MBTI_PerceivingLabel.Text;
+                    */
+                    string EI = Edit_MBTI_IntroversionLabel.Text;
+                    string NS = Edit_MBTI_SensingLabel.Text;
+                    string TF = Edit_MBTI_FeelingLabel.Text;
+                    string JP = Edit_MBTI_PerceivingLabel.Text;
                     string OTE = Edit_BIG5_OTELabel.Text;
                     string C = Edit_BIG5_CLabel.Text;
                     string E = Edit_BIG5_ELabel.Text;
@@ -239,9 +203,9 @@ namespace SigningIn_DatabaseV2
                     if (first)
                     {
                         cmd.CommandText = string.Format(@"INSERT INTO PersonalityInfo 
-                                            (UserName, MBTI_IE, MBTI_NS, MBTI_TF, MBTI_JP, BIG5_OTE, BIG5_C, BIG5_E, BIG5_A, BIG5_C)
+                                            (UserName, MBTI_EI, MBTI_NS, MBTI_TF, MBTI_JP, BIG5_OTE, BIG5_C, BIG5_E, BIG5_A, BIG5_N)
                                                VALUES
-                                                 ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}');", OpeningForm._username, IE, NS, TF, JP, OTE, C, E, A, N);
+                                                 ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}');", OpeningForm._username, EI, NS, TF, JP, OTE, C, E, A, N);
                         cmd.CommandType = CommandType.Text;
                         cmd.Connection = connection;
                         cmd.ExecuteNonQuery();
@@ -262,9 +226,9 @@ namespace SigningIn_DatabaseV2
                             // DisplayLabel.Text = "Log in successfull. " + int.Parse(reader["UserID"].ToString()).ToString();
                             reader.Close();
 
-                            cmd.CommandText = string.Format(@"UPDATE SurveyInfo 
-                                                      SET MBTI_IE = '{1}', MBTI_NS = '{2}', MBTI_TF = '{3}', MBTI_JP = '{4}', BIG5_OTE = '{5}', BIG5_C = '{6}', BIG5_E = '{7}', BIG5_A = '{8}', BIG5_N = '{9}'
-                                                      WHERE UserName = '{0}';", OpeningForm._username, IE, NS, TF, JP, OTE, C, E, A, N);
+                            cmd.CommandText = string.Format(@"UPDATE PersonalityInfo
+                                                      SET MBTI_EI = '{1}', MBTI_NS = '{2}', MBTI_TF = '{3}', MBTI_JP = '{4}', BIG5_OTE = '{5}', BIG5_C = '{6}', BIG5_E = '{7}', BIG5_A = '{8}', BIG5_N = '{9}'
+                                                      WHERE UserName = '{0}';", OpeningForm._username, EI, NS, TF, JP, OTE, C, E, A, N);
                             cmd.CommandType = CommandType.Text;
                             cmd.Connection = connection;
                             cmd.ExecuteNonQuery();
@@ -282,7 +246,7 @@ namespace SigningIn_DatabaseV2
             ParentControl.PersonalityInfoPanel.Controls.Remove(this);
             PersonalityInfoControl pic = new PersonalityInfoControl(1, ParentControl);
             ParentControl.usercontrols[2] = pic;
-            ParentControl.BasicInfoPanel.Controls.Add(pic);
+            ParentControl.PersonalityInfoPanel.Controls.Add(pic);
             ParentControl.stateOfSections[2] = 1;
             if (first)
             {
@@ -296,10 +260,73 @@ namespace SigningIn_DatabaseV2
             ParentControl.PersonalityInfoPanel.Controls.Remove(this);
             PersonalityInfoControl pic = new PersonalityInfoControl(0, ParentControl);
             ParentControl.usercontrols[2] = pic;
-            ParentControl.BasicInfoPanel.Controls.Add(pic);
+            ParentControl.PersonalityInfoPanel.Controls.Add(pic);
             ParentControl.stateOfSections[2] = 0;
             this.Dispose();
+        }
 
+        private void EDIT_MBTI_IEBAR_Scroll(object sender, EventArgs e)
+        {
+            int percent = EDIT_MBTI_IEBAR.Value;
+            Edit_MBTI_ExtraversionLabel.Text = (100 - percent).ToString();
+            Edit_MBTI_IntroversionLabel.Text = percent.ToString();
+        }
+
+        private void EDIT_MBTI_NSBAR_Scroll(object sender, EventArgs e)
+        {
+            int percent = EDIT_MBTI_NSBAR.Value;
+            Edit_MBTI_IntuitionLabel.Text = (100 - percent).ToString();
+            Edit_MBTI_SensingLabel.Text = percent.ToString();
+        }
+
+        private void EDIT_MBTI_TFBAR_Scroll(object sender, EventArgs e)
+        {
+            int percent = EDIT_MBTI_TFBAR.Value;
+            Edit_MBTI_ThinkingLabel.Text = (100 - percent).ToString();
+            Edit_MBTI_FeelingLabel.Text = percent.ToString();
+        }
+
+        private void EDIT_MBTI_JPBAR_Scroll(object sender, EventArgs e)
+        {
+            int percent = EDIT_MBTI_JPBAR.Value;
+            Edit_MBTI_JudgingLabel.Text = (100 - percent).ToString();
+            Edit_MBTI_PerceivingLabel.Text = percent.ToString();
+        }
+
+        private void EDIT_BIG5_OTEBAR_Scroll(object sender, EventArgs e)
+        {
+            int percent = EDIT_BIG5_OTEBAR.Value;
+            Edit_BIG5_OTELabel.Text = percent.ToString();
+        }
+
+        private void EDIT_BIG5_CBAR_Scroll(object sender, EventArgs e)
+        {
+            int percent = EDIT_BIG5_CBAR.Value;
+            Edit_BIG5_CLabel.Text = percent.ToString();
+        }
+
+        private void EDIT_BIG5_EBAR_Scroll(object sender, EventArgs e)
+        {
+            int percent = EDIT_BIG5_EBAR.Value;
+            Edit_BIG5_ELabel.Text = percent.ToString();
+        }
+
+        private void EDIT_BIG5_ABAR_Scroll(object sender, EventArgs e)
+        {
+            int percent = EDIT_BIG5_ABAR.Value;
+            Edit_BIG5_ALabel.Text = percent.ToString();
+        }
+
+        private void EDIT_BIG5_NBAR_Scroll(object sender, EventArgs e)
+        {
+            int percent = EDIT_BIG5_NBAR.Value;
+            Edit_BIG5_NLabel.Text = percent.ToString();
+        }
+
+        private void DoNothing_MouseWheel(object sender, EventArgs e)
+        {
+            HandledMouseEventArgs ee = (HandledMouseEventArgs)e;
+            ee.Handled = true;
         }
     }
 }
