@@ -45,17 +45,17 @@ namespace SigningIn_DatabaseV2
             int numquestions = 0;
             int amountpaid = 0;
             int samplesize = 0;
-            if (!int.TryParse(SampleSizeTextBox.ToString(), out samplesize))
+            if (!int.TryParse(SampleSizeTextBox.Text.ToString(), out samplesize))
             {
                 DisplayLabel.Text = "Must input an integer in 'Sample Size' Text Box";
                 return;
             }
-            else if (!int.TryParse(NumberOfQuestionsTextBox.ToString(), out numquestions))
+            else if (!int.TryParse(NumberOfQuestionsTextBox.Text.ToString(), out numquestions))
             {
                 DisplayLabel.Text = "Must input an integer in 'Number of Questions' Text Box";
                 return;
             }
-            else if (!int.TryParse(AmountPaidTextBox.ToString(), out amountpaid))
+            else if (!int.TryParse(AmountPaidTextBox.Text.ToString(), out amountpaid))
             {
                 DisplayLabel.Text = "Must input an integer in 'Amount Paid' Text Box";
                 return;
@@ -80,27 +80,27 @@ namespace SigningIn_DatabaseV2
                 DisplayLabel.Text = "Confirmation String Too Long";
                 return;
             }
-            else if (!OTE_Value.SelectedValue.Equals(null) && OTE_Operator.SelectedValue.Equals(null))
+            else if (OTE_Value.SelectedIndex != -1 && OTE_Operator.SelectedIndex == -1)
             {
                 DisplayLabel.Text = "Choose an operator for Openness to Experience";
                 return;
             }
-            else if (!C_Value.SelectedValue.Equals(null) && C_Operator.SelectedValue.Equals(null))
+            else if (C_Value.SelectedIndex != -1 && C_Operator.SelectedIndex == -1)
             {
                 DisplayLabel.Text = "Choose an operator for conscientiousness";
                 return;
             }
-            else if (!E_Value.SelectedValue.Equals(null) && E_Operator.SelectedValue.Equals(null))
+            else if (E_Value.SelectedIndex != -1 && E_Operator.SelectedIndex == -1)
             {
                 DisplayLabel.Text = "Choose an operator for Extroversion";
                 return;
             }
-            else if (!A_Value.SelectedValue.Equals(null) && A_Operator.SelectedValue.Equals(null))
+            else if (A_Value.SelectedIndex != -1 && A_Operator.SelectedIndex == -1)
             {
                 DisplayLabel.Text = "Choose an operator for Agreeableness";
                 return;
             }
-            else if (!N_Value.SelectedValue.Equals(null) && N_Operator.SelectedValue.Equals(null))
+            else if (N_Value.SelectedIndex != -1 && N_Operator.SelectedIndex == -1)
             {
                 DisplayLabel.Text = "Choose an operator for neuroticism";
                 return;
@@ -137,9 +137,9 @@ namespace SigningIn_DatabaseV2
                     }
                     string control = controls[0].ToString() + "/" + controls[1].ToString() + "/" + controls[2].ToString() + "/" + controls[3].ToString();
                     cmd.CommandText = string.Format(@"INSERT INTO Surveys 
-                                            (UserName, SurveyName, SurveyDescription, SurveyLink, ConfirmationString, SampleSize, NumberOfQuestions, AmountPaid, Controls)
+                                            (UserName, SurveyName, SurveyDescription, SurveyLink, ConfirmationString, SampleSize, CurrentResults, NumberOfQuestions, AmountPaid, Controls)
                                                VALUES
-                                                 ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}');", 
+                                                 ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', 0, '{6}', '{7}', '{8}');", 
                                                  OpeningForm._username, SurveyNameTextBox.Text, SurveyDescriptionTextBox.Text, SurveyLinkTextBox.Text, 
                                                  SurveyConfirmationTextBox.Text, samplesize, numquestions, amountpaid, control);
                     cmd.CommandType = CommandType.Text;
@@ -161,7 +161,7 @@ namespace SigningIn_DatabaseV2
                     #region DeterminingParameters
                     string fullouterBasic = "";
                     string fullouterPersonality = "";
-                    string where = "";
+                  //  string where = "";
                     string firstNameParameter;
                     string dateParameter;
                     string genderParameter;
@@ -180,7 +180,7 @@ namespace SigningIn_DatabaseV2
                     else
                     {
                         fullouterBasic = "FULL OUTER JOIN BasicInfo ON BasicInfo.UserName = Users.UserName\n";
-                        where = "WHERE ";
+                   //     where = "WHERE ";
                         firstNameParameter = "BasicInfo.FirstName = '" + FirstNameTextBox.Text + "' AND ";
                     }
                     if (MonthBox.SelectedIndex == -1)
@@ -190,7 +190,7 @@ namespace SigningIn_DatabaseV2
                     else
                     {
                         fullouterBasic = "FULL OUTER JOIN BasicInfo ON BasicInfo.UserName = Users.UserName\n";
-                        where = "WHERE ";
+                  //      where = "WHERE ";
                         dateParameter = "BasicInfo.DateOfBirth = '" + (MonthBox.SelectedIndex + 1).ToString() + "/" + DayBox.SelectedItem.ToString() + "/" + YearBox.SelectedItem.ToString() + "' AND ";
                     }
                     if (GenderBox.SelectedIndex == -1)
@@ -200,7 +200,7 @@ namespace SigningIn_DatabaseV2
                     else
                     {
                         fullouterBasic = "FULL OUTER JOIN BasicInfo ON BasicInfo.UserName = Users.UserName\n";
-                        where = "WHERE ";
+                     //   where = "WHERE ";
                         genderParameter = "BasicInfo.Gender = '" + GenderBox.SelectedItem.ToString() + "' AND ";
                     }
                     if (SexBox.SelectedIndex == -1)
@@ -210,7 +210,7 @@ namespace SigningIn_DatabaseV2
                     else
                     {
                         fullouterBasic = "FULL OUTER JOIN BasicInfo ON BasicInfo.UserName = Users.UserName\n";
-                        where = "WHERE ";
+                        //where = "WHERE ";
                         sexParameter = "BasicInfo.Sex = '" + SexBox.SelectedItem.ToString() + "' AND ";
                     }
                     if (MBTIBox.SelectedIndex == -1)
@@ -220,7 +220,7 @@ namespace SigningIn_DatabaseV2
                     else
                     {
                         fullouterPersonality = "FULL OUTER JOIN PersonalityInfo ON PersonalityInfo.UserName = Users.UserName\n";
-                        where = "WHERE ";
+                       // where = "WHERE ";
                         string operator1;
                         string operator2;
                         string operator3;
@@ -270,7 +270,7 @@ namespace SigningIn_DatabaseV2
                     else
                     {
                         fullouterPersonality = "FULL OUTER JOIN PersonalityInfo ON PersonalityInfo.UserName = Users.UserName\n";
-                        where = "WHERE ";
+                        //where = "WHERE ";
                         int number;
                         number = 20 * (5 - OTE_Value.SelectedIndex);
                         if (OTE_Operator.SelectedItem.ToString().Equals("="))
@@ -293,7 +293,7 @@ namespace SigningIn_DatabaseV2
                     else
                     {
                         fullouterPersonality = "FULL OUTER JOIN PersonalityInfo ON PersonalityInfo.UserName = Users.UserName\n";
-                        where = "WHERE ";
+                       // where = "WHERE ";
                         int number;
                         number = 20 * (5 - C_Value.SelectedIndex);
                         if (C_Operator.SelectedItem.ToString().Equals("="))
@@ -316,7 +316,7 @@ namespace SigningIn_DatabaseV2
                     else
                     {
                         fullouterPersonality = "FULL OUTER JOIN PersonalityInfo ON PersonalityInfo.UserName = Users.UserName\n";
-                        where = "WHERE ";
+                        //where = "WHERE ";
                         int number;
                         number = 20 * (5 - E_Value.SelectedIndex);
                         if (E_Operator.SelectedItem.ToString().Equals("="))
@@ -339,7 +339,7 @@ namespace SigningIn_DatabaseV2
                     else
                     {
                         fullouterPersonality = "FULL OUTER JOIN PersonalityInfo ON PersonalityInfo.UserName = Users.UserName\n";
-                        where = "WHERE ";
+                        //where = "WHERE ";
                         int number;
                         number = 20 * (5 - A_Value.SelectedIndex);
                         if (A_Operator.SelectedItem.ToString().Equals("="))
@@ -362,7 +362,7 @@ namespace SigningIn_DatabaseV2
                     else
                     {
                         fullouterPersonality = "FULL OUTER JOIN PersonalityInfo ON PersonalityInfo.UserName = Users.UserName\n";
-                        where = "WHERE ";
+                        //where = "WHERE ";
                         int number;
                         number = 20 * (5 - N_Value.SelectedIndex);
                         if (N_Operator.SelectedItem.ToString().Equals("="))
@@ -381,12 +381,12 @@ namespace SigningIn_DatabaseV2
                     #endregion
                     string totalCommand = string.Format(@"UPDATE Users SET  Users.AvailableSurveys = Users.AvailableSurveys + '/{0}' 
                                                             FROM Users
-                                                            " + fullouterBasic + fullouterPersonality + where + firstNameParameter + dateParameter 
+                                                            " + fullouterBasic + fullouterPersonality + "WHERE Researcher = 0 AND " + firstNameParameter + dateParameter 
                                                              + genderParameter + sexParameter + mbtiParamter + oteParameter + cParameter + eParameter + aParameter + nParameter, surveyid);
-                    if (where.Equals("WHERE "))
-                    {
+                   // if (where.Equals("WHERE "))
+                  //  {
                         totalCommand = totalCommand.Substring(0, totalCommand.Length - 4);
-                    }
+                  //  }
                     totalCommand += ";";
                     cmd.CommandText = totalCommand;
                     cmd.CommandType = CommandType.Text;
@@ -394,6 +394,9 @@ namespace SigningIn_DatabaseV2
                     cmd.ExecuteNonQuery();
 
                     connection.Close();
+
+                    ViewSurveysControl vsc = new ViewSurveysControl();
+                    OpeningForm.switchUserControl(vsc);
                 }
             }
             catch (SqlException ex)

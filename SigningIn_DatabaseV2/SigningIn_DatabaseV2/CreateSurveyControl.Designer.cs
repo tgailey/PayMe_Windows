@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateSurveyControl));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label18 = new System.Windows.Forms.Label();
             this.CreateAccountButton = new System.Windows.Forms.Button();
             this.SurveyConfirmationTextBox = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
@@ -86,7 +87,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.WelcomeLabel = new System.Windows.Forms.Label();
             this.DisplayLabel = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -120,6 +120,17 @@
             this.panel1.Size = new System.Drawing.Size(285, 410);
             this.panel1.TabIndex = 0;
             // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Bell MT", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.MediumAquamarine;
+            this.label18.Location = new System.Drawing.Point(3, 1104);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(261, 13);
+            this.label18.TabIndex = 17;
+            this.label18.Text = "--- Right now this will lag a lot. Working On a Fix ----";
+            // 
             // CreateAccountButton
             // 
             this.CreateAccountButton.BackColor = System.Drawing.Color.MediumAquamarine;
@@ -138,7 +149,7 @@
             this.SurveyConfirmationTextBox.Location = new System.Drawing.Point(137, 398);
             this.SurveyConfirmationTextBox.Name = "SurveyConfirmationTextBox";
             this.SurveyConfirmationTextBox.Size = new System.Drawing.Size(124, 20);
-            this.SurveyConfirmationTextBox.TabIndex = 48;
+            this.SurveyConfirmationTextBox.TabIndex = 15;
             this.SurveyConfirmationTextBox.WordWrap = false;
             // 
             // label17
@@ -149,7 +160,7 @@
             this.label17.Location = new System.Drawing.Point(3, 400);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(133, 15);
-            this.label17.TabIndex = 47;
+            this.label17.TabIndex = 14;
             this.label17.Text = "Survey Confirmation Key:";
             // 
             // panel3
@@ -171,7 +182,7 @@
             this.ControlMBTI.Location = new System.Drawing.Point(178, 146);
             this.ControlMBTI.Name = "ControlMBTI";
             this.ControlMBTI.Size = new System.Drawing.Size(76, 17);
-            this.ControlMBTI.TabIndex = 17;
+            this.ControlMBTI.TabIndex = 5;
             this.ControlMBTI.Text = "MBTIType";
             this.ControlMBTI.UseVisualStyleBackColor = true;
             // 
@@ -181,7 +192,7 @@
             this.ControlSex.Location = new System.Drawing.Point(130, 146);
             this.ControlSex.Name = "ControlSex";
             this.ControlSex.Size = new System.Drawing.Size(44, 17);
-            this.ControlSex.TabIndex = 16;
+            this.ControlSex.TabIndex = 4;
             this.ControlSex.Text = "Sex";
             this.ControlSex.UseVisualStyleBackColor = true;
             // 
@@ -191,7 +202,7 @@
             this.ControlGender.Location = new System.Drawing.Point(68, 146);
             this.ControlGender.Name = "ControlGender";
             this.ControlGender.Size = new System.Drawing.Size(61, 17);
-            this.ControlGender.TabIndex = 15;
+            this.ControlGender.TabIndex = 3;
             this.ControlGender.Text = "Gender";
             this.ControlGender.UseVisualStyleBackColor = true;
             // 
@@ -201,7 +212,7 @@
             this.ControlAge.Location = new System.Drawing.Point(16, 146);
             this.ControlAge.Name = "ControlAge";
             this.ControlAge.Size = new System.Drawing.Size(45, 17);
-            this.ControlAge.TabIndex = 14;
+            this.ControlAge.TabIndex = 2;
             this.ControlAge.Text = "Age";
             this.ControlAge.UseVisualStyleBackColor = true;
             // 
@@ -212,7 +223,7 @@
             this.label16.Location = new System.Drawing.Point(12, 75);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(230, 67);
-            this.label16.TabIndex = 13;
+            this.label16.TabIndex = 1;
             this.label16.Text = "----- NOTE :  Not all variables supported at the moment. The more variables you c" +
     "ontrol, the harder it\'s going to be to get the results, but the more representat" +
     "ive the sample------";
@@ -225,7 +236,7 @@
             this.label15.Location = new System.Drawing.Point(8, 3);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(237, 75);
-            this.label15.TabIndex = 12;
+            this.label15.TabIndex = 0;
             this.label15.Text = "Select what variables you would like to control";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -234,7 +245,7 @@
             this.SampleSizeTextBox.Location = new System.Drawing.Point(172, 285);
             this.SampleSizeTextBox.Name = "SampleSizeTextBox";
             this.SampleSizeTextBox.Size = new System.Drawing.Size(52, 20);
-            this.SampleSizeTextBox.TabIndex = 23;
+            this.SampleSizeTextBox.TabIndex = 7;
             // 
             // label14
             // 
@@ -244,7 +255,7 @@
             this.label14.Location = new System.Drawing.Point(96, 287);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(68, 15);
-            this.label14.TabIndex = 22;
+            this.label14.TabIndex = 6;
             this.label14.Text = "Sample Size: ";
             // 
             // panel2
@@ -283,7 +294,7 @@
             this.panel2.Location = new System.Drawing.Point(6, 431);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(255, 485);
-            this.panel2.TabIndex = 21;
+            this.panel2.TabIndex = 16;
             // 
             // ClearInfoButton
             // 
@@ -293,7 +304,7 @@
             this.ClearInfoButton.Location = new System.Drawing.Point(29, 448);
             this.ClearInfoButton.Name = "ClearInfoButton";
             this.ClearInfoButton.Size = new System.Drawing.Size(200, 25);
-            this.ClearInfoButton.TabIndex = 45;
+            this.ClearInfoButton.TabIndex = 30;
             this.ClearInfoButton.Text = "Clear Info";
             this.ClearInfoButton.UseVisualStyleBackColor = false;
             this.ClearInfoButton.Click += new System.EventHandler(this.ClearInfoButton_Click);
@@ -311,7 +322,7 @@
             this.N_Value.Location = new System.Drawing.Point(164, 419);
             this.N_Value.Name = "N_Value";
             this.N_Value.Size = new System.Drawing.Size(85, 21);
-            this.N_Value.TabIndex = 44;
+            this.N_Value.TabIndex = 29;
             // 
             // A_Value
             // 
@@ -326,7 +337,7 @@
             this.A_Value.Location = new System.Drawing.Point(164, 397);
             this.A_Value.Name = "A_Value";
             this.A_Value.Size = new System.Drawing.Size(85, 21);
-            this.A_Value.TabIndex = 43;
+            this.A_Value.TabIndex = 26;
             // 
             // E_Value
             // 
@@ -341,7 +352,7 @@
             this.E_Value.Location = new System.Drawing.Point(164, 374);
             this.E_Value.Name = "E_Value";
             this.E_Value.Size = new System.Drawing.Size(85, 21);
-            this.E_Value.TabIndex = 42;
+            this.E_Value.TabIndex = 23;
             // 
             // C_Value
             // 
@@ -356,7 +367,7 @@
             this.C_Value.Location = new System.Drawing.Point(164, 351);
             this.C_Value.Name = "C_Value";
             this.C_Value.Size = new System.Drawing.Size(85, 21);
-            this.C_Value.TabIndex = 41;
+            this.C_Value.TabIndex = 20;
             // 
             // OTE_Value
             // 
@@ -371,7 +382,7 @@
             this.OTE_Value.Location = new System.Drawing.Point(164, 329);
             this.OTE_Value.Name = "OTE_Value";
             this.OTE_Value.Size = new System.Drawing.Size(85, 21);
-            this.OTE_Value.TabIndex = 40;
+            this.OTE_Value.TabIndex = 17;
             // 
             // N_Operator
             // 
@@ -384,7 +395,7 @@
             this.N_Operator.Location = new System.Drawing.Point(120, 419);
             this.N_Operator.Name = "N_Operator";
             this.N_Operator.Size = new System.Drawing.Size(38, 21);
-            this.N_Operator.TabIndex = 39;
+            this.N_Operator.TabIndex = 28;
             // 
             // A_Operator
             // 
@@ -397,7 +408,7 @@
             this.A_Operator.Location = new System.Drawing.Point(120, 396);
             this.A_Operator.Name = "A_Operator";
             this.A_Operator.Size = new System.Drawing.Size(38, 21);
-            this.A_Operator.TabIndex = 38;
+            this.A_Operator.TabIndex = 25;
             // 
             // E_Operator
             // 
@@ -410,7 +421,7 @@
             this.E_Operator.Location = new System.Drawing.Point(120, 374);
             this.E_Operator.Name = "E_Operator";
             this.E_Operator.Size = new System.Drawing.Size(38, 21);
-            this.E_Operator.TabIndex = 37;
+            this.E_Operator.TabIndex = 22;
             // 
             // C_Operator
             // 
@@ -423,7 +434,7 @@
             this.C_Operator.Location = new System.Drawing.Point(120, 351);
             this.C_Operator.Name = "C_Operator";
             this.C_Operator.Size = new System.Drawing.Size(38, 21);
-            this.C_Operator.TabIndex = 36;
+            this.C_Operator.TabIndex = 19;
             // 
             // OTE_Operator
             // 
@@ -436,7 +447,7 @@
             this.OTE_Operator.Location = new System.Drawing.Point(120, 329);
             this.OTE_Operator.Name = "OTE_Operator";
             this.OTE_Operator.Size = new System.Drawing.Size(38, 21);
-            this.OTE_Operator.TabIndex = 35;
+            this.OTE_Operator.TabIndex = 16;
             // 
             // label10
             // 
@@ -447,7 +458,7 @@
             this.label10.Location = new System.Drawing.Point(45, 423);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(72, 12);
-            this.label10.TabIndex = 34;
+            this.label10.TabIndex = 27;
             this.label10.Text = "NEUROTICISM";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -460,7 +471,7 @@
             this.label11.Location = new System.Drawing.Point(27, 400);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(87, 12);
-            this.label11.TabIndex = 33;
+            this.label11.TabIndex = 24;
             this.label11.Text = "AGREEABLENESS";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -473,7 +484,7 @@
             this.Big5_ExtraversionLabel.Location = new System.Drawing.Point(36, 375);
             this.Big5_ExtraversionLabel.Name = "Big5_ExtraversionLabel";
             this.Big5_ExtraversionLabel.Size = new System.Drawing.Size(79, 12);
-            this.Big5_ExtraversionLabel.TabIndex = 32;
+            this.Big5_ExtraversionLabel.TabIndex = 21;
             this.Big5_ExtraversionLabel.Text = "EXTRAVERSION";
             this.Big5_ExtraversionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -486,7 +497,7 @@
             this.label13.Location = new System.Drawing.Point(3, 355);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(108, 12);
-            this.label13.TabIndex = 31;
+            this.label13.TabIndex = 18;
             this.label13.Text = "CONSCIENTIOUSNESS";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -499,7 +510,7 @@
             this.label12.Location = new System.Drawing.Point(3, 336);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(113, 9);
-            this.label12.TabIndex = 30;
+            this.label12.TabIndex = 15;
             this.label12.Text = "OPENNESS TO EXPERIENCE";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -511,7 +522,7 @@
             this.label9.Location = new System.Drawing.Point(72, 306);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(106, 16);
-            this.label9.TabIndex = 25;
+            this.label9.TabIndex = 14;
             this.label9.Text = "--- BIG5 TYPE ---";
             // 
             // MBTIBox
@@ -538,7 +549,7 @@
             this.MBTIBox.Location = new System.Drawing.Point(65, 280);
             this.MBTIBox.Name = "MBTIBox";
             this.MBTIBox.Size = new System.Drawing.Size(121, 21);
-            this.MBTIBox.TabIndex = 24;
+            this.MBTIBox.TabIndex = 13;
             // 
             // label8
             // 
@@ -548,7 +559,7 @@
             this.label8.Location = new System.Drawing.Point(72, 263);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(109, 16);
-            this.label8.TabIndex = 23;
+            this.label8.TabIndex = 12;
             this.label8.Text = "--- MBTI TYPE ---";
             // 
             // SexBox
@@ -563,7 +574,7 @@
             this.SexBox.Location = new System.Drawing.Point(65, 239);
             this.SexBox.Name = "SexBox";
             this.SexBox.Size = new System.Drawing.Size(121, 21);
-            this.SexBox.TabIndex = 22;
+            this.SexBox.TabIndex = 11;
             // 
             // GenderBox
             // 
@@ -577,7 +588,7 @@
             this.GenderBox.Location = new System.Drawing.Point(65, 198);
             this.GenderBox.Name = "GenderBox";
             this.GenderBox.Size = new System.Drawing.Size(121, 21);
-            this.GenderBox.TabIndex = 20;
+            this.GenderBox.TabIndex = 9;
             // 
             // YearBox
             // 
@@ -667,7 +678,7 @@
             this.YearBox.Location = new System.Drawing.Point(179, 157);
             this.YearBox.Name = "YearBox";
             this.YearBox.Size = new System.Drawing.Size(74, 21);
-            this.YearBox.TabIndex = 18;
+            this.YearBox.TabIndex = 7;
             // 
             // DayBox
             // 
@@ -710,7 +721,7 @@
             this.DayBox.Location = new System.Drawing.Point(117, 157);
             this.DayBox.Name = "DayBox";
             this.DayBox.Size = new System.Drawing.Size(56, 21);
-            this.DayBox.TabIndex = 17;
+            this.DayBox.TabIndex = 6;
             // 
             // MonthBox
             // 
@@ -735,14 +746,14 @@
             this.MonthBox.Location = new System.Drawing.Point(14, 157);
             this.MonthBox.Name = "MonthBox";
             this.MonthBox.Size = new System.Drawing.Size(97, 21);
-            this.MonthBox.TabIndex = 16;
+            this.MonthBox.TabIndex = 5;
             // 
             // FirstNameTextBox
             // 
             this.FirstNameTextBox.Location = new System.Drawing.Point(55, 110);
             this.FirstNameTextBox.Name = "FirstNameTextBox";
             this.FirstNameTextBox.Size = new System.Drawing.Size(148, 20);
-            this.FirstNameTextBox.TabIndex = 14;
+            this.FirstNameTextBox.TabIndex = 3;
             // 
             // ConfirmPasswordLabelEdit
             // 
@@ -752,7 +763,7 @@
             this.ConfirmPasswordLabelEdit.Location = new System.Drawing.Point(95, 221);
             this.ConfirmPasswordLabelEdit.Name = "ConfirmPasswordLabelEdit";
             this.ConfirmPasswordLabelEdit.Size = new System.Drawing.Size(64, 16);
-            this.ConfirmPasswordLabelEdit.TabIndex = 21;
+            this.ConfirmPasswordLabelEdit.TabIndex = 10;
             this.ConfirmPasswordLabelEdit.Text = "--- SEX ---";
             // 
             // GenderLabelEdit
@@ -763,7 +774,7 @@
             this.GenderLabelEdit.Location = new System.Drawing.Point(80, 181);
             this.GenderLabelEdit.Name = "GenderLabelEdit";
             this.GenderLabelEdit.Size = new System.Drawing.Size(96, 16);
-            this.GenderLabelEdit.TabIndex = 19;
+            this.GenderLabelEdit.TabIndex = 8;
             this.GenderLabelEdit.Text = "--- GENDER ---";
             // 
             // EmailLabelEdit
@@ -774,7 +785,7 @@
             this.EmailLabelEdit.Location = new System.Drawing.Point(58, 135);
             this.EmailLabelEdit.Name = "EmailLabelEdit";
             this.EmailLabelEdit.Size = new System.Drawing.Size(140, 16);
-            this.EmailLabelEdit.TabIndex = 15;
+            this.EmailLabelEdit.TabIndex = 4;
             this.EmailLabelEdit.Text = "--- DATE OF BIRTH ---";
             // 
             // FirstNameLabelEdit
@@ -785,7 +796,7 @@
             this.FirstNameLabelEdit.Location = new System.Drawing.Point(72, 92);
             this.FirstNameLabelEdit.Name = "FirstNameLabelEdit";
             this.FirstNameLabelEdit.Size = new System.Drawing.Size(119, 16);
-            this.FirstNameLabelEdit.TabIndex = 13;
+            this.FirstNameLabelEdit.TabIndex = 2;
             this.FirstNameLabelEdit.Text = "--- FIRST NAME ---";
             // 
             // label7
@@ -795,7 +806,7 @@
             this.label7.Location = new System.Drawing.Point(14, 58);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(230, 34);
-            this.label7.TabIndex = 12;
+            this.label7.TabIndex = 1;
             this.label7.Text = "----- NOTE :  Leave blank the areas you are not interested in testing------";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -806,7 +817,7 @@
             this.label6.Location = new System.Drawing.Point(12, 2);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(237, 68);
-            this.label6.TabIndex = 11;
+            this.label6.TabIndex = 0;
             this.label6.Text = "Select the population you would like to test";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -815,7 +826,7 @@
             this.SurveyLinkTextBox.Location = new System.Drawing.Point(91, 368);
             this.SurveyLinkTextBox.Name = "SurveyLinkTextBox";
             this.SurveyLinkTextBox.Size = new System.Drawing.Size(170, 20);
-            this.SurveyLinkTextBox.TabIndex = 20;
+            this.SurveyLinkTextBox.TabIndex = 13;
             this.SurveyLinkTextBox.WordWrap = false;
             // 
             // label5
@@ -826,7 +837,7 @@
             this.label5.Location = new System.Drawing.Point(3, 370);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(82, 15);
-            this.label5.TabIndex = 19;
+            this.label5.TabIndex = 12;
             this.label5.Text = "Link to Survey:";
             // 
             // AmountPaidTextBox
@@ -834,14 +845,14 @@
             this.AmountPaidTextBox.Location = new System.Drawing.Point(172, 341);
             this.AmountPaidTextBox.Name = "AmountPaidTextBox";
             this.AmountPaidTextBox.Size = new System.Drawing.Size(52, 20);
-            this.AmountPaidTextBox.TabIndex = 18;
+            this.AmountPaidTextBox.TabIndex = 11;
             // 
             // NumberOfQuestionsTextBox
             // 
             this.NumberOfQuestionsTextBox.Location = new System.Drawing.Point(172, 313);
             this.NumberOfQuestionsTextBox.Name = "NumberOfQuestionsTextBox";
             this.NumberOfQuestionsTextBox.Size = new System.Drawing.Size(52, 20);
-            this.NumberOfQuestionsTextBox.TabIndex = 17;
+            this.NumberOfQuestionsTextBox.TabIndex = 9;
             // 
             // SurveyDescriptionTextBox
             // 
@@ -849,14 +860,14 @@
             this.SurveyDescriptionTextBox.Multiline = true;
             this.SurveyDescriptionTextBox.Name = "SurveyDescriptionTextBox";
             this.SurveyDescriptionTextBox.Size = new System.Drawing.Size(245, 61);
-            this.SurveyDescriptionTextBox.TabIndex = 16;
+            this.SurveyDescriptionTextBox.TabIndex = 5;
             // 
             // SurveyNameTextBox
             // 
             this.SurveyNameTextBox.Location = new System.Drawing.Point(38, 176);
             this.SurveyNameTextBox.Name = "SurveyNameTextBox";
             this.SurveyNameTextBox.Size = new System.Drawing.Size(205, 20);
-            this.SurveyNameTextBox.TabIndex = 15;
+            this.SurveyNameTextBox.TabIndex = 3;
             // 
             // label3
             // 
@@ -866,7 +877,7 @@
             this.label3.Location = new System.Drawing.Point(24, 199);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(231, 15);
-            this.label3.TabIndex = 14;
+            this.label3.TabIndex = 4;
             this.label3.Text = "--- Survey Description (360 character max) ---";
             // 
             // label4
@@ -877,7 +888,7 @@
             this.label4.Location = new System.Drawing.Point(38, 157);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(205, 15);
-            this.label4.TabIndex = 13;
+            this.label4.TabIndex = 2;
             this.label4.Text = "--- Survey Name (100 character max) --- ";
             // 
             // label2
@@ -888,7 +899,7 @@
             this.label2.Location = new System.Drawing.Point(3, 343);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(163, 15);
-            this.label2.TabIndex = 12;
+            this.label2.TabIndex = 10;
             this.label2.Text = "Amount Paid to Each Surveyer: ";
             // 
             // label1
@@ -899,7 +910,7 @@
             this.label1.Location = new System.Drawing.Point(49, 315);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(117, 15);
-            this.label1.TabIndex = 11;
+            this.label1.TabIndex = 8;
             this.label1.Text = "Number of Questions: ";
             // 
             // WelcomeLabel
@@ -909,7 +920,7 @@
             this.WelcomeLabel.Location = new System.Drawing.Point(3, 0);
             this.WelcomeLabel.Name = "WelcomeLabel";
             this.WelcomeLabel.Size = new System.Drawing.Size(258, 48);
-            this.WelcomeLabel.TabIndex = 10;
+            this.WelcomeLabel.TabIndex = 0;
             this.WelcomeLabel.Text = "Create a Survey";
             this.WelcomeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -920,20 +931,9 @@
             this.DisplayLabel.Location = new System.Drawing.Point(3, 46);
             this.DisplayLabel.Name = "DisplayLabel";
             this.DisplayLabel.Size = new System.Drawing.Size(258, 111);
-            this.DisplayLabel.TabIndex = 9;
+            this.DisplayLabel.TabIndex = 1;
             this.DisplayLabel.Text = resources.GetString("DisplayLabel.Text");
             this.DisplayLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Bell MT", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.MediumAquamarine;
-            this.label18.Location = new System.Drawing.Point(3, 1104);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(261, 13);
-            this.label18.TabIndex = 49;
-            this.label18.Text = "--- Right now this will lag a lot. Working On a Fix ----";
             // 
             // CreateSurveyControl
             // 

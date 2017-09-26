@@ -107,6 +107,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserSurveyDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserSurveyDetails.Designer.cs">
+      <DependentUpon>UserSurveyDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewSurveysControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -152,6 +158,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UserSurveyDetails.resx">
+      <DependentUpon>UserSurveyDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ViewSurveysControl.resx">
       <DependentUpon>ViewSurveysControl.cs</DependentUpon>
     </EmbeddedResource>
