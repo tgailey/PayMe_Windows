@@ -99,6 +99,7 @@
             // CreateAccountButton
             // 
             this.CreateAccountButton.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.CreateAccountButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.CreateAccountButton.Font = new System.Drawing.Font("Bell MT", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CreateAccountButton.ForeColor = System.Drawing.Color.DimGray;
             this.CreateAccountButton.Location = new System.Drawing.Point(18, 305);
@@ -134,6 +135,7 @@
             // LoginButton
             // 
             this.LoginButton.BackColor = System.Drawing.Color.DimGray;
+            this.LoginButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.LoginButton.FlatAppearance.BorderSize = 0;
             this.LoginButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
             this.LoginButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
@@ -162,6 +164,7 @@
             // ResearcherRadioButton
             // 
             this.ResearcherRadioButton.AutoSize = true;
+            this.ResearcherRadioButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ResearcherRadioButton.Location = new System.Drawing.Point(166, 254);
             this.ResearcherRadioButton.Name = "ResearcherRadioButton";
             this.ResearcherRadioButton.Size = new System.Drawing.Size(80, 17);
@@ -173,6 +176,7 @@
             // 
             this.UserRadioButton.AutoSize = true;
             this.UserRadioButton.Checked = true;
+            this.UserRadioButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.UserRadioButton.Location = new System.Drawing.Point(113, 254);
             this.UserRadioButton.Name = "UserRadioButton";
             this.UserRadioButton.Size = new System.Drawing.Size(47, 17);

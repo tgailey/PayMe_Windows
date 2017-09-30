@@ -107,17 +107,41 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserSurveyDetails.cs">
+    <Compile Include="Researcher_SurveyDetails.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserSurveyDetails.Designer.cs">
-      <DependentUpon>UserSurveyDetails.cs</DependentUpon>
+    <Compile Include="Researcher_SurveyDetails.Designer.cs">
+      <DependentUpon>Researcher_SurveyDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="ViewSurveysControl.cs">
+    <Compile Include="Researcher_SurveySmallButton.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ViewSurveysControl.Designer.cs">
-      <DependentUpon>ViewSurveysControl.cs</DependentUpon>
+    <Compile Include="Researcher_SurveySmallButton.Designer.cs">
+      <DependentUpon>Researcher_SurveySmallButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_SurveyDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User_SurveyDetails.Designer.cs">
+      <DependentUpon>User_SurveyDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Researcher_ViewSurveysControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Researcher_ViewSurveysControl.Designer.cs">
+      <DependentUpon>Researcher_ViewSurveysControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_SurveySmallButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User_SurveySmallButton.Designer.cs">
+      <DependentUpon>User_SurveySmallButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_ViewSurveysControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User_ViewSurveysControl.Designer.cs">
+      <DependentUpon>User_ViewSurveysControl.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AboutMeControl.resx">
       <DependentUpon>AboutMeControl.cs</DependentUpon>
@@ -158,11 +182,23 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="UserSurveyDetails.resx">
-      <DependentUpon>UserSurveyDetails.cs</DependentUpon>
+    <EmbeddedResource Include="Researcher_SurveyDetails.resx">
+      <DependentUpon>Researcher_SurveyDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ViewSurveysControl.resx">
-      <DependentUpon>ViewSurveysControl.cs</DependentUpon>
+    <EmbeddedResource Include="Researcher_SurveySmallButton.resx">
+      <DependentUpon>Researcher_SurveySmallButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_SurveyDetails.resx">
+      <DependentUpon>User_SurveyDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Researcher_ViewSurveysControl.resx">
+      <DependentUpon>Researcher_ViewSurveysControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_SurveySmallButton.resx">
+      <DependentUpon>User_SurveySmallButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_ViewSurveysControl.resx">
+      <DependentUpon>User_ViewSurveysControl.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

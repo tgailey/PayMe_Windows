@@ -104,24 +104,21 @@ namespace SigningIn_DatabaseV2
                         researcher = 1;
                     }
                     cmd.CommandText = string.Format(@"INSERT INTO Users 
-                                            (UserName, EmailAddress, UserPassword, AvailableSurveys, Researcher)
+                                            (UserName, EmailAddress, UserPassword, AvailableSurveys, Researcher, ChangesMade)
                                                VALUES
-                                                 ('{0}', '{1}', '{2}', '', '{3}');", UsernameTextBox.Text, EmailTextBox.Text, PasswordTextBox.Text, researcher);
+                                                 ('{0}', '{1}', '{2}', '/', '{3}', 1);", UsernameTextBox.Text.ToLower(), EmailTextBox.Text, PasswordTextBox.Text, researcher);
                     cmd.CommandType = CommandType.Text;
                     cmd.Connection = connection;
                     cmd.ExecuteNonQuery();
                     connection.Close();
                     OpeningForm._username = UsernameTextBox.Text;
-                    if (ResearcherRadioButton.Checked)
-                    {
-                        OpeningForm._researcher = 1;
-                    }
+                    OpeningForm._researcher = researcher;
                     OpeningForm.openApp();
                 }
             }
             catch (SqlException ex)
             {
-                DisplayLabel.Text = "Connection Failed. " + OpeningForm.cb.DataSource;
+                DisplayLabel.Text = "Connection Failed. " + ex.Message;
             }
         }
 

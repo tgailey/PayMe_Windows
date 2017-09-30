@@ -64,6 +64,8 @@ namespace SigningIn_DatabaseV2
 
                         OpeningForm._username = reader["UserName"].ToString();
                         OpeningForm._researcher = int.Parse(reader["Researcher"].ToString());
+                        OpeningForm.addSurveys(reader["AvailableSurveys"].ToString().Split('/'));
+                        OpeningForm._changesMade = int.Parse(reader["ChangesMade"].ToString());
                         reader.Close();
                         cmd.Dispose();
                         connection.Close();

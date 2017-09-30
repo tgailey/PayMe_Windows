@@ -51,11 +51,11 @@
             this.Big5_ConscientiousnessPercentLabel = new System.Windows.Forms.Label();
             this.BIG5_E_BAR = new System.Windows.Forms.TrackBar();
             this.MBTIPanel = new System.Windows.Forms.Panel();
+            this.TestMBTIButton = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.TestMBTIButton = new System.Windows.Forms.Button();
             this.FirstNameLabelEdit = new System.Windows.Forms.Label();
             this.MBTI_IE_BAR = new System.Windows.Forms.TrackBar();
             this.JudgingPercentLabel = new System.Windows.Forms.Label();
@@ -73,6 +73,7 @@
             this.DisplayLabel = new System.Windows.Forms.Label();
             this.ConfirmEditsButton = new System.Windows.Forms.Button();
             this.EditPanel = new System.Windows.Forms.Panel();
+            this.DiscardEditsButton = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.Edit_BIG5_NLabel = new System.Windows.Forms.Label();
@@ -163,6 +164,7 @@
             // EditInfoButton
             // 
             this.EditInfoButton.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.EditInfoButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.EditInfoButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EditInfoButton.ForeColor = System.Drawing.Color.DimGray;
             this.EditInfoButton.Location = new System.Drawing.Point(21, 570);
@@ -304,6 +306,7 @@
             // 
             this.TestBIG5Button.AutoSize = true;
             this.TestBIG5Button.BackColor = System.Drawing.Color.Transparent;
+            this.TestBIG5Button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.TestBIG5Button.FlatAppearance.BorderSize = 0;
             this.TestBIG5Button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
             this.TestBIG5Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
@@ -454,6 +457,26 @@
             this.MBTIPanel.Size = new System.Drawing.Size(250, 280);
             this.MBTIPanel.TabIndex = 23;
             // 
+            // TestMBTIButton
+            // 
+            this.TestMBTIButton.AutoSize = true;
+            this.TestMBTIButton.BackColor = System.Drawing.Color.Transparent;
+            this.TestMBTIButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.TestMBTIButton.FlatAppearance.BorderSize = 0;
+            this.TestMBTIButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
+            this.TestMBTIButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.TestMBTIButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TestMBTIButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TestMBTIButton.ForeColor = System.Drawing.Color.MediumAquamarine;
+            this.TestMBTIButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.TestMBTIButton.Location = new System.Drawing.Point(12, 61);
+            this.TestMBTIButton.Name = "TestMBTIButton";
+            this.TestMBTIButton.Size = new System.Drawing.Size(227, 30);
+            this.TestMBTIButton.TabIndex = 2;
+            this.TestMBTIButton.Text = "DON\'T KNOW YOUR MBTI TYPE?";
+            this.TestMBTIButton.UseVisualStyleBackColor = false;
+            this.TestMBTIButton.Click += new System.EventHandler(this.TestMBTIButton_Click);
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -504,25 +527,6 @@
             this.label3.TabIndex = 1;
             this.label3.Text = "Please input your MBTI type in form of percentages.";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // TestMBTIButton
-            // 
-            this.TestMBTIButton.AutoSize = true;
-            this.TestMBTIButton.BackColor = System.Drawing.Color.Transparent;
-            this.TestMBTIButton.FlatAppearance.BorderSize = 0;
-            this.TestMBTIButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
-            this.TestMBTIButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
-            this.TestMBTIButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.TestMBTIButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TestMBTIButton.ForeColor = System.Drawing.Color.MediumAquamarine;
-            this.TestMBTIButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.TestMBTIButton.Location = new System.Drawing.Point(12, 61);
-            this.TestMBTIButton.Name = "TestMBTIButton";
-            this.TestMBTIButton.Size = new System.Drawing.Size(227, 30);
-            this.TestMBTIButton.TabIndex = 2;
-            this.TestMBTIButton.Text = "DON\'T KNOW YOUR MBTI TYPE?";
-            this.TestMBTIButton.UseVisualStyleBackColor = false;
-            this.TestMBTIButton.Click += new System.EventHandler(this.TestMBTIButton_Click);
             // 
             // FirstNameLabelEdit
             // 
@@ -715,11 +719,12 @@
             // ConfirmEditsButton
             // 
             this.ConfirmEditsButton.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.ConfirmEditsButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ConfirmEditsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ConfirmEditsButton.ForeColor = System.Drawing.Color.DimGray;
-            this.ConfirmEditsButton.Location = new System.Drawing.Point(17, 570);
+            this.ConfirmEditsButton.Location = new System.Drawing.Point(121, 570);
             this.ConfirmEditsButton.Name = "ConfirmEditsButton";
-            this.ConfirmEditsButton.Size = new System.Drawing.Size(200, 25);
+            this.ConfirmEditsButton.Size = new System.Drawing.Size(96, 25);
             this.ConfirmEditsButton.TabIndex = 26;
             this.ConfirmEditsButton.Text = "Confirm Edits";
             this.ConfirmEditsButton.UseVisualStyleBackColor = false;
@@ -727,6 +732,7 @@
             // 
             // EditPanel
             // 
+            this.EditPanel.Controls.Add(this.DiscardEditsButton);
             this.EditPanel.Controls.Add(this.DisplayLabel);
             this.EditPanel.Controls.Add(this.ConfirmEditsButton);
             this.EditPanel.Controls.Add(this.panel3);
@@ -735,6 +741,20 @@
             this.EditPanel.Name = "EditPanel";
             this.EditPanel.Size = new System.Drawing.Size(250, 600);
             this.EditPanel.TabIndex = 25;
+            // 
+            // DiscardEditsButton
+            // 
+            this.DiscardEditsButton.BackColor = System.Drawing.Color.PaleVioletRed;
+            this.DiscardEditsButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.DiscardEditsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DiscardEditsButton.ForeColor = System.Drawing.Color.DimGray;
+            this.DiscardEditsButton.Location = new System.Drawing.Point(19, 570);
+            this.DiscardEditsButton.Name = "DiscardEditsButton";
+            this.DiscardEditsButton.Size = new System.Drawing.Size(96, 25);
+            this.DiscardEditsButton.TabIndex = 27;
+            this.DiscardEditsButton.Text = "Discard Edits";
+            this.DiscardEditsButton.UseVisualStyleBackColor = false;
+            this.DiscardEditsButton.Click += new System.EventHandler(this.DiscardEditsButton_Click);
             // 
             // panel3
             // 
@@ -790,6 +810,7 @@
             // EDIT_BIG5_NBAR
             // 
             this.EDIT_BIG5_NBAR.AutoSize = false;
+            this.EDIT_BIG5_NBAR.Cursor = System.Windows.Forms.Cursors.Hand;
             this.EDIT_BIG5_NBAR.Location = new System.Drawing.Point(16, 235);
             this.EDIT_BIG5_NBAR.Maximum = 100;
             this.EDIT_BIG5_NBAR.Name = "EDIT_BIG5_NBAR";
@@ -897,6 +918,7 @@
             // EDIT_BIG5_OTEBAR
             // 
             this.EDIT_BIG5_OTEBAR.AutoSize = false;
+            this.EDIT_BIG5_OTEBAR.Cursor = System.Windows.Forms.Cursors.Hand;
             this.EDIT_BIG5_OTEBAR.Location = new System.Drawing.Point(15, 113);
             this.EDIT_BIG5_OTEBAR.Maximum = 100;
             this.EDIT_BIG5_OTEBAR.Name = "EDIT_BIG5_OTEBAR";
@@ -934,6 +956,7 @@
             // EDIT_BIG5_ABAR
             // 
             this.EDIT_BIG5_ABAR.AutoSize = false;
+            this.EDIT_BIG5_ABAR.Cursor = System.Windows.Forms.Cursors.Hand;
             this.EDIT_BIG5_ABAR.Location = new System.Drawing.Point(15, 211);
             this.EDIT_BIG5_ABAR.Maximum = 100;
             this.EDIT_BIG5_ABAR.Name = "EDIT_BIG5_ABAR";
@@ -945,6 +968,7 @@
             // EDIT_BIG5_CBAR
             // 
             this.EDIT_BIG5_CBAR.AutoSize = false;
+            this.EDIT_BIG5_CBAR.Cursor = System.Windows.Forms.Cursors.Hand;
             this.EDIT_BIG5_CBAR.Location = new System.Drawing.Point(16, 148);
             this.EDIT_BIG5_CBAR.Maximum = 100;
             this.EDIT_BIG5_CBAR.Name = "EDIT_BIG5_CBAR";
@@ -982,6 +1006,7 @@
             // EDIT_BIG5_EBAR
             // 
             this.EDIT_BIG5_EBAR.AutoSize = false;
+            this.EDIT_BIG5_EBAR.Cursor = System.Windows.Forms.Cursors.Hand;
             this.EDIT_BIG5_EBAR.Location = new System.Drawing.Point(16, 178);
             this.EDIT_BIG5_EBAR.Maximum = 100;
             this.EDIT_BIG5_EBAR.Name = "EDIT_BIG5_EBAR";
@@ -1100,6 +1125,7 @@
             // EDIT_MBTI_IEBAR
             // 
             this.EDIT_MBTI_IEBAR.AutoSize = false;
+            this.EDIT_MBTI_IEBAR.Cursor = System.Windows.Forms.Cursors.Hand;
             this.EDIT_MBTI_IEBAR.Location = new System.Drawing.Point(34, 123);
             this.EDIT_MBTI_IEBAR.Maximum = 100;
             this.EDIT_MBTI_IEBAR.Name = "EDIT_MBTI_IEBAR";
@@ -1177,6 +1203,7 @@
             // EDIT_MBTI_JPBAR
             // 
             this.EDIT_MBTI_JPBAR.AutoSize = false;
+            this.EDIT_MBTI_JPBAR.Cursor = System.Windows.Forms.Cursors.Hand;
             this.EDIT_MBTI_JPBAR.Location = new System.Drawing.Point(34, 258);
             this.EDIT_MBTI_JPBAR.Maximum = 100;
             this.EDIT_MBTI_JPBAR.Name = "EDIT_MBTI_JPBAR";
@@ -1189,6 +1216,7 @@
             // EDIT_MBTI_NSBAR
             // 
             this.EDIT_MBTI_NSBAR.AutoSize = false;
+            this.EDIT_MBTI_NSBAR.Cursor = System.Windows.Forms.Cursors.Hand;
             this.EDIT_MBTI_NSBAR.Location = new System.Drawing.Point(34, 169);
             this.EDIT_MBTI_NSBAR.Maximum = 100;
             this.EDIT_MBTI_NSBAR.Name = "EDIT_MBTI_NSBAR";
@@ -1253,6 +1281,7 @@
             // EDIT_MBTI_TFBAR
             // 
             this.EDIT_MBTI_TFBAR.AutoSize = false;
+            this.EDIT_MBTI_TFBAR.Cursor = System.Windows.Forms.Cursors.Hand;
             this.EDIT_MBTI_TFBAR.Location = new System.Drawing.Point(34, 212);
             this.EDIT_MBTI_TFBAR.Maximum = 100;
             this.EDIT_MBTI_TFBAR.Name = "EDIT_MBTI_TFBAR";
@@ -1391,5 +1420,6 @@
         private System.Windows.Forms.Button ConfirmEditsButton;
         private System.Windows.Forms.Label DisplayLabel2;
         private System.Windows.Forms.Button EditInfoButton;
+        private System.Windows.Forms.Button DiscardEditsButton;
     }
 }

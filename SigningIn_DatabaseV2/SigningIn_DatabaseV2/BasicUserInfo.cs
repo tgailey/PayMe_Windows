@@ -178,5 +178,11 @@ namespace SigningIn_DatabaseV2
                 PersonalityInfoShowHide.Text = "Show";
             }
         }
+
+        private void ViewSurveysButton_Click(object sender, EventArgs e)
+        {
+            User_ViewSurveysControl vsc = new User_ViewSurveysControl();
+            OpeningForm.switchUserControl(vsc);
+        }
     }
 }

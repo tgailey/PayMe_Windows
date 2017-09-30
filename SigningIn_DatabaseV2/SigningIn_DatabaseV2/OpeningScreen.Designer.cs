@@ -33,6 +33,7 @@
             this.LoginButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.AboutMeButton = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // WelcomeLabel
@@ -50,6 +51,7 @@
             // CreateAccountButton
             // 
             this.CreateAccountButton.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.CreateAccountButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.CreateAccountButton.Font = new System.Drawing.Font("Bell MT", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CreateAccountButton.ForeColor = System.Drawing.Color.DimGray;
             this.CreateAccountButton.Location = new System.Drawing.Point(16, 136);
@@ -63,9 +65,10 @@
             // LoginButton
             // 
             this.LoginButton.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.LoginButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.LoginButton.Font = new System.Drawing.Font("Bell MT", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoginButton.ForeColor = System.Drawing.Color.DimGray;
-            this.LoginButton.Location = new System.Drawing.Point(16, 284);
+            this.LoginButton.Location = new System.Drawing.Point(16, 239);
             this.LoginButton.Name = "LoginButton";
             this.LoginButton.Size = new System.Drawing.Size(245, 54);
             this.LoginButton.TabIndex = 2;
@@ -78,7 +81,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Bell MT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.MediumAquamarine;
-            this.label1.Location = new System.Drawing.Point(25, 244);
+            this.label1.Location = new System.Drawing.Point(25, 221);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(236, 15);
             this.label1.TabIndex = 3;
@@ -88,6 +91,7 @@
             // 
             this.AboutMeButton.AutoSize = true;
             this.AboutMeButton.BackColor = System.Drawing.Color.Transparent;
+            this.AboutMeButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AboutMeButton.FlatAppearance.BorderSize = 0;
             this.AboutMeButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
             this.AboutMeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
@@ -103,11 +107,25 @@
             this.AboutMeButton.UseVisualStyleBackColor = false;
             this.AboutMeButton.Click += new System.EventHandler(this.AboutMeButton_Click);
             // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Bell MT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.MediumAquamarine;
+            this.label2.Location = new System.Drawing.Point(25, 296);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(236, 114);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "NOTE -- PAYME IS CURRENTLY IN DEVELOPMENT, AND MANY FEATURES ARE STILL MISSING. I" +
+    "T IS NOT INTENDED FOR ANY ACTUAL USE AT THIS MOMENT.\r\nPLEASE MESSAGE ANY BUGS TO" +
+    " tgailey@asu.edu";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // OpeningScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.AboutMeButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.LoginButton);
@@ -127,5 +145,6 @@
         private System.Windows.Forms.Button LoginButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button AboutMeButton;
+        private System.Windows.Forms.Label label2;
     }
 }

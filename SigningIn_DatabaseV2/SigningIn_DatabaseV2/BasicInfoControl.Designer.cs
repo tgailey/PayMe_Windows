@@ -78,6 +78,7 @@
             // 
             // SexBox
             // 
+            this.SexBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SexBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.SexBox.FormattingEnabled = true;
             this.SexBox.Items.AddRange(new object[] {
@@ -92,6 +93,7 @@
             // 
             // GenderBox
             // 
+            this.GenderBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.GenderBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.GenderBox.FormattingEnabled = true;
             this.GenderBox.Items.AddRange(new object[] {
@@ -106,6 +108,7 @@
             // 
             // YearBox
             // 
+            this.YearBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.YearBox.DropDownHeight = 150;
             this.YearBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.YearBox.FormattingEnabled = true;
@@ -196,6 +199,7 @@
             // 
             // DayBox
             // 
+            this.DayBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DayBox.DropDownHeight = 150;
             this.DayBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.DayBox.FormattingEnabled = true;
@@ -241,6 +245,7 @@
             // 
             this.MonthBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.MonthBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.MonthBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.MonthBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.MonthBox.FormattingEnabled = true;
             this.MonthBox.IntegralHeight = false;
@@ -276,6 +281,7 @@
             // ConfirmEditsButton
             // 
             this.ConfirmEditsButton.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.ConfirmEditsButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ConfirmEditsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ConfirmEditsButton.ForeColor = System.Drawing.Color.DimGray;
             this.ConfirmEditsButton.Location = new System.Drawing.Point(26, 189);
@@ -413,6 +419,7 @@
             // EditInfoButton
             // 
             this.EditInfoButton.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.EditInfoButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.EditInfoButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EditInfoButton.ForeColor = System.Drawing.Color.DimGray;
             this.EditInfoButton.Location = new System.Drawing.Point(25, 189);

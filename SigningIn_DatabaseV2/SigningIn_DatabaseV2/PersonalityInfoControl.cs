@@ -209,12 +209,12 @@ namespace SigningIn_DatabaseV2
                         cmd.CommandType = CommandType.Text;
                         cmd.Connection = connection;
                         cmd.ExecuteNonQuery();
-                        connection.Close();
+                        //connection.Close();
                     }
                     else
                     {
                         SqlDataReader reader;
-                        cmd.CommandText = string.Format(@"SELECT * FROM SurveyInfo
+                        cmd.CommandText = string.Format(@"SELECT * FROM PersonalityInfo
                                                     WHERE UserName = '{0}';", OpeningForm._username);
                         cmd.CommandType = CommandType.Text;
                         cmd.Connection = connection;
@@ -232,10 +232,16 @@ namespace SigningIn_DatabaseV2
                             cmd.CommandType = CommandType.Text;
                             cmd.Connection = connection;
                             cmd.ExecuteNonQuery();
-                            cmd.Dispose();
-                            connection.Close();
+                            //connection.Close();
                         }
                     }
+                    OpeningForm._changesMade = 1;
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Connection = connection;
+                    cmd.CommandText = "update users set changesmade = 1 where username = '" + OpeningForm._username + "'";
+                    cmd.ExecuteNonQuery();
+                    connection.Close();
+                    cmd.Dispose();
                 }
 
             }
@@ -327,6 +333,15 @@ namespace SigningIn_DatabaseV2
         {
             HandledMouseEventArgs ee = (HandledMouseEventArgs)e;
             ee.Handled = true;
+        }
+
+        private void DiscardEditsButton_Click(object sender, EventArgs e)
+        {
+            ParentControl.PersonalityInfoPanel.Controls.Remove(this);
+            PersonalityInfoControl pic = new PersonalityInfoControl(1, ParentControl);
+            ParentControl.usercontrols[2] = pic;
+            ParentControl.PersonalityInfoPanel.Controls.Add(pic);
+            ParentControl.stateOfSections[2] = 1;
         }
     }
 }

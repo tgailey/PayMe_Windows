@@ -40,6 +40,7 @@
             // PasswordTextBox
             // 
             this.PasswordTextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.PasswordTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.PasswordTextBox.ForeColor = System.Drawing.SystemColors.GrayText;
             this.PasswordTextBox.Location = new System.Drawing.Point(46, 172);
             this.PasswordTextBox.Name = "PasswordTextBox";
@@ -51,6 +52,7 @@
             // UsernameTextBox
             // 
             this.UsernameTextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.UsernameTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.UsernameTextBox.ForeColor = System.Drawing.SystemColors.GrayText;
             this.UsernameTextBox.Location = new System.Drawing.Point(46, 130);
             this.UsernameTextBox.Name = "UsernameTextBox";
@@ -73,6 +75,7 @@
             // LoginButton
             // 
             this.LoginButton.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.LoginButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.LoginButton.Font = new System.Drawing.Font("Bell MT", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoginButton.ForeColor = System.Drawing.Color.DimGray;
             this.LoginButton.Location = new System.Drawing.Point(18, 254);
@@ -108,6 +111,7 @@
             // SignUpButton
             // 
             this.SignUpButton.BackColor = System.Drawing.Color.DimGray;
+            this.SignUpButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SignUpButton.FlatAppearance.BorderSize = 0;
             this.SignUpButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
             this.SignUpButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;

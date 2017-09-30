@@ -46,8 +46,9 @@ namespace SigningIn_DatabaseV2
                         UserFirstNameLabel.Text = reader["FirstName"].ToString();
                         FirstNameTextBox.Text = reader["FirstName"].ToString();
 
-                        UserDOBLabel.Text = reader["DateOfBirth"].ToString();
-                        string[] dob = reader["DateOfBirth"].ToString().Split('/');
+                        string dateString = reader["DateOfBirth"].ToString().Substring(0, reader["DateOfBirth"].ToString().Length- 12);
+                        UserDOBLabel.Text = dateString;
+                        string[] dob = dateString.Split('/');
                         MonthBox.SelectedIndex = int.Parse(dob[0])-1;
                         DayBox.SelectedItem = dob[1];
                         YearBox.SelectedItem = dob[2];
@@ -115,7 +116,7 @@ namespace SigningIn_DatabaseV2
 
                     if (first)
                     {
-                        string dateOfBirth = (MonthBox.SelectedIndex + 1).ToString() + "/" + DayBox.SelectedItem.ToString() + "/" + YearBox.SelectedItem.ToString();
+                        string dateOfBirth =  YearBox.SelectedItem.ToString() + "-" + (MonthBox.SelectedIndex + 1).ToString() + "-" + DayBox.SelectedItem.ToString();
                         cmd.CommandText = string.Format(@"INSERT INTO BasicInfo 
                                             (UserName, FirstName, DateOfBirth, Gender, Sex)
                                                VALUES
@@ -123,7 +124,7 @@ namespace SigningIn_DatabaseV2
                         cmd.CommandType = CommandType.Text;
                         cmd.Connection = connection;
                         cmd.ExecuteNonQuery();
-                        connection.Close();
+                      //  connection.Close();
                     }
                     else
                     {
@@ -141,34 +142,38 @@ namespace SigningIn_DatabaseV2
                             reader.Close();
 
 
-                            string dateOfBirth = (MonthBox.SelectedIndex + 1).ToString() + "/" + DayBox.SelectedItem.ToString() + "/" + YearBox.SelectedItem.ToString();
+                            string dateOfBirth = YearBox.SelectedItem.ToString() + "-" + (MonthBox.SelectedIndex + 1).ToString() + "-" + DayBox.SelectedItem.ToString();
                             cmd.CommandText = string.Format(@"UPDATE BasicInfo 
                                                       SET FirstName = '{0}', DateOfBirth = '{1}', Gender = '{2}', Sex = '{3}'
-                                                      WHERE UserName = '{4}';",FirstNameTextBox.Text, dateOfBirth, GenderBox.SelectedItem.ToString(), SexBox.SelectedItem.ToString(), OpeningForm._username);
+                                                      WHERE UserName = '{4}';", FirstNameTextBox.Text, dateOfBirth, GenderBox.SelectedItem.ToString(), SexBox.SelectedItem.ToString(), OpeningForm._username);
                             cmd.CommandType = CommandType.Text;
                             cmd.Connection = connection;
                             cmd.ExecuteNonQuery();
-                            cmd.Dispose();
-                            connection.Close();
+                            //connection.Close();
                         }
                     }
+                    ParentControl.BasicInfoPanel.Controls.Remove(this);
+                    BasicInfoControl bic = new BasicInfoControl(1, ParentControl);
+                    ParentControl.usercontrols[1] = bic;
+                    ParentControl.BasicInfoPanel.Controls.Add(bic);
+                    ParentControl.stateOfSections[1] = 1;
+                    if (first)
+                    {
+                        ParentControl.changeColors(1);
+                    }
+                    OpeningForm._changesMade = 1;
+                    cmd.CommandText = "update users set changesmade = 1 where username = '" + OpeningForm._username + "'";
+                    cmd.ExecuteNonQuery();
+                    connection.Close();
+                    this.Dispose();
                 }
 
             }
             catch (SqlException ex)
             {
-                DisplayLabel.Text = "Connection Failed. " + OpeningForm.cb.DataSource;
+                DisplayLabel.Text = "Connection Failed. " + ex.Message;
             }
-            ParentControl.BasicInfoPanel.Controls.Remove(this);
-            BasicInfoControl bic = new BasicInfoControl(1, ParentControl);
-            ParentControl.usercontrols[1] = bic;
-            ParentControl.BasicInfoPanel.Controls.Add(bic);
-            ParentControl.stateOfSections[1] = 1;
-            if (first)
-            {
-                ParentControl.changeColors(1);
-            }
-            this.Dispose();
+           
         }
 
         private void EditInfoButton_Click(object sender, EventArgs e)

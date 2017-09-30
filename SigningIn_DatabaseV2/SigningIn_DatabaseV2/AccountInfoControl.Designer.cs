@@ -84,6 +84,7 @@
             // ConfirmEditsButton
             // 
             this.ConfirmEditsButton.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.ConfirmEditsButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ConfirmEditsButton.Font = new System.Drawing.Font("Bell MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ConfirmEditsButton.ForeColor = System.Drawing.Color.DimGray;
             this.ConfirmEditsButton.Location = new System.Drawing.Point(26, 131);
@@ -198,6 +199,7 @@
             // EditInfoButton
             // 
             this.EditInfoButton.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.EditInfoButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.EditInfoButton.Font = new System.Drawing.Font("Bell MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EditInfoButton.ForeColor = System.Drawing.Color.DimGray;
             this.EditInfoButton.Location = new System.Drawing.Point(24, 131);

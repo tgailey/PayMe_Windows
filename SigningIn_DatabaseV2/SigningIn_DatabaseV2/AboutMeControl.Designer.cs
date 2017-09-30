@@ -35,10 +35,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.CreateAccountButton = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.CreateAccountButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -116,6 +116,31 @@
             this.panel1.TabIndex = 6;
             this.panel1.TabStop = true;
             // 
+            // CreateAccountButton
+            // 
+            this.CreateAccountButton.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.CreateAccountButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CreateAccountButton.Font = new System.Drawing.Font("Bell MT", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CreateAccountButton.ForeColor = System.Drawing.Color.DimGray;
+            this.CreateAccountButton.Location = new System.Drawing.Point(11, 1338);
+            this.CreateAccountButton.Name = "CreateAccountButton";
+            this.CreateAccountButton.Size = new System.Drawing.Size(245, 54);
+            this.CreateAccountButton.TabIndex = 8;
+            this.CreateAccountButton.Text = "Create Account";
+            this.CreateAccountButton.UseVisualStyleBackColor = false;
+            this.CreateAccountButton.Click += new System.EventHandler(this.CreateAccountButton_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Bell MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.MediumAquamarine;
+            this.label5.Location = new System.Drawing.Point(0, 1311);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(268, 22);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "--- SOUND INTERESTING?---";
+            // 
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -137,30 +162,6 @@
             this.label4.Size = new System.Drawing.Size(238, 23);
             this.label4.TabIndex = 5;
             this.label4.Text = "--- AS A RESEARCHER---";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Bell MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.MediumAquamarine;
-            this.label5.Location = new System.Drawing.Point(0, 1311);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(268, 22);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "--- SOUND INTERESTING?---";
-            // 
-            // CreateAccountButton
-            // 
-            this.CreateAccountButton.BackColor = System.Drawing.Color.MediumAquamarine;
-            this.CreateAccountButton.Font = new System.Drawing.Font("Bell MT", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CreateAccountButton.ForeColor = System.Drawing.Color.DimGray;
-            this.CreateAccountButton.Location = new System.Drawing.Point(11, 1338);
-            this.CreateAccountButton.Name = "CreateAccountButton";
-            this.CreateAccountButton.Size = new System.Drawing.Size(245, 54);
-            this.CreateAccountButton.TabIndex = 8;
-            this.CreateAccountButton.Text = "Create Account";
-            this.CreateAccountButton.UseVisualStyleBackColor = false;
-            this.CreateAccountButton.Click += new System.EventHandler(this.CreateAccountButton_Click);
             // 
             // AboutMeControl
             // 
